@@ -1,3 +1,4 @@
+"use client";
 export default function Home() {
   const goToSection = (id) => {
     const el = document.getElementById(id);
