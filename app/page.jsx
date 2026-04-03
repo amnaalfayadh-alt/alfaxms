@@ -1,23 +1,30 @@
 export default function Home() {
+  const goToSection = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <main style={styles.page}>
       <div style={styles.texture} />
       <div style={styles.glowTop} />
       <div style={styles.glowRight} />
 
-      <section style={styles.heroSection}>
-        <nav style={styles.nav}>
-          <div style={styles.brand}>
-            <span style={styles.brandMain}>ALFAXMS</span>
-            <span style={styles.brandLLC}>LLC</span>
-          </div>
-          <div style={styles.navLinks}>
-            <a href="#about" style={styles.navLinkRed}>About</a>
-            <a href="#services" style={styles.navLinkRed}>Services</a>
-            <a href="#contact" style={styles.navLinkRed}>Contact</a>
-          </div>
-        </nav>
+      <nav style={styles.fixedNav}>
+        <div style={styles.brand}>
+          <span style={styles.brandMain}>ALFAXMS</span>
+          <span style={styles.brandLLC}>LLC</span>
+        </div>
+        <div style={styles.navLinks}>
+          <button type="button" onClick={() => goToSection("about")} style={styles.navButtonRed}>About</button>
+          <button type="button" onClick={() => goToSection("services")} style={styles.navButtonRed}>Services</button>
+          <button type="button" onClick={() => goToSection("contact")} style={styles.navButtonRed}>Contact</button>
+        </div>
+      </nav>
 
+      <section style={styles.heroSection}>
         <div style={styles.heroGrid}>
           <div>
             <div style={styles.pill}>PRIVATE LUXURY AUTOMOTIVE STUDIO</div>
@@ -39,8 +46,8 @@ export default function Home() {
             </p>
             <div style={styles.appointmentBadgeRed}>BY APPOINTMENT ONLY</div>
             <div style={styles.buttonRow}>
-              <a href="#services" style={styles.primaryButton}>Explore Services</a>
-              <a href="#contact" style={styles.secondaryButton}>Contact Us</a>
+              <button type="button" onClick={() => goToSection("services")} style={styles.primaryButton}>Explore Services</button>
+              <button type="button" onClick={() => goToSection("contact")} style={styles.secondaryButton}>Contact Us</button>
             </div>
           </div>
 
@@ -61,18 +68,6 @@ export default function Home() {
       </section>
 
       <section id="about" style={styles.section}>
-        <nav style={styles.nav}>
-          <div style={styles.brand}>
-            <span style={styles.brandMain}>ALFAXMS</span>
-            <span style={styles.brandLLC}>LLC</span>
-          </div>
-          <div style={styles.navLinks}>
-            <a href="#about" style={styles.navLinkRed}>About</a>
-            <a href="#services" style={styles.navLinkRed}>Services</a>
-            <a href="#contact" style={styles.navLinkRed}>Contact</a>
-          </div>
-        </nav>
-
         <div style={styles.aboutGrid}>
           <div>
             <div style={styles.sectionEyebrow}>ABOUT</div>
@@ -113,18 +108,6 @@ export default function Home() {
       </section>
 
       <section id="services" style={styles.section}>
-        <nav style={styles.nav}>
-          <div style={styles.brand}>
-            <span style={styles.brandMain}>ALFAXMS</span>
-            <span style={styles.brandLLC}>LLC</span>
-          </div>
-          <div style={styles.navLinks}>
-            <a href="#about" style={styles.navLinkRed}>About</a>
-            <a href="#services" style={styles.navLinkRed}>Services</a>
-            <a href="#contact" style={styles.navLinkRed}>Contact</a>
-          </div>
-        </nav>
-
         <div style={styles.servicesHeader}>
           <div>
             <div style={styles.sectionEyebrow}>SERVICES</div>
@@ -216,18 +199,6 @@ export default function Home() {
       </section>
 
       <section id="contact" style={styles.section}>
-        <nav style={styles.nav}>
-          <div style={styles.brand}>
-            <span style={styles.brandMain}>ALFAXMS</span>
-            <span style={styles.brandLLC}>LLC</span>
-          </div>
-          <div style={styles.navLinks}>
-            <a href="#about" style={styles.navLinkRed}>About</a>
-            <a href="#services" style={styles.navLinkRed}>Services</a>
-            <a href="#contact" style={styles.navLinkRed}>Contact</a>
-          </div>
-        </nav>
-
         <div style={styles.contactGrid}>
           <div>
             <div style={styles.sectionEyebrow}>CONTACT</div>
@@ -265,6 +236,7 @@ const styles = {
     background: "linear-gradient(90deg, #050505 0%, #111111 55%, #1a1a1a 100%)",
     color: "#d9d9d9",
     fontFamily: "Arial, Helvetica, sans-serif",
+    scrollBehavior: "smooth",
   },
   texture: {
     position: "fixed",
@@ -289,9 +261,25 @@ const styles = {
     pointerEvents: "none",
     background: "radial-gradient(circle at right center, rgba(255,255,255,0.08), transparent 55%)",
   },
+  fixedNav: {
+    position: "fixed",
+    top: 18,
+    left: 96,
+    right: 96,
+    zIndex: 50,
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    border: "1px solid rgba(255,255,255,0.08)",
+    borderRadius: "999px",
+    padding: "14px 22px",
+    background: "rgba(0,0,0,0.55)",
+    backdropFilter: "blur(10px)",
+    boxShadow: "0 0 30px rgba(255,255,255,0.03)",
+  },
   heroSection: {
     position: "relative",
-    padding: "18px 96px 72px",
+    padding: "120px 96px 72px",
     minHeight: "100vh",
     display: "flex",
     flexDirection: "column",
@@ -299,20 +287,9 @@ const styles = {
   },
   section: {
     position: "relative",
-    padding: "14px 96px 72px",
+    padding: "120px 96px 72px",
     minHeight: "100vh",
     borderTop: "1px solid rgba(255,255,255,0.04)",
-  },
-  nav: {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    border: "1px solid rgba(255,255,255,0.08)",
-    borderRadius: "999px",
-    padding: "14px 22px",
-    background: "rgba(0,0,0,0.28)",
-    backdropFilter: "blur(8px)",
-    boxShadow: "0 0 30px rgba(255,255,255,0.03)",
   },
   brand: {
     display: "flex",
@@ -333,10 +310,14 @@ const styles = {
     gap: 34,
     fontSize: 14,
   },
-  navLinkRed: {
+  navButtonRed: {
     color: "#c11212",
-    textDecoration: "none",
+    background: "transparent",
+    border: "none",
     fontWeight: 600,
+    cursor: "pointer",
+    fontSize: 14,
+    padding: 0,
   },
   heroGrid: {
     display: "grid",
@@ -413,9 +394,10 @@ const styles = {
     borderRadius: 999,
     background: "#f3f3f3",
     color: "#151515",
-    textDecoration: "none",
     fontWeight: 700,
     minWidth: 190,
+    border: "none",
+    cursor: "pointer",
   },
   secondaryButton: {
     display: "inline-flex",
@@ -426,9 +408,9 @@ const styles = {
     background: "rgba(255,255,255,0.03)",
     border: "1px solid rgba(255,255,255,0.1)",
     color: "#d7d7d7",
-    textDecoration: "none",
     fontWeight: 700,
     minWidth: 160,
+    cursor: "pointer",
   },
   featureCard: {
     background: "linear-gradient(180deg, rgba(38,38,38,0.82), rgba(22,22,22,0.9))",
@@ -630,3 +612,4 @@ const styles = {
     fontSize: 18,
   },
 };
+
