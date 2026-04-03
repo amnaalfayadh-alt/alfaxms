@@ -1,0 +1,1 @@
+export default function LuxuryAutomotiveWebsite(){return <div>ALFAXMS READY</div>}
