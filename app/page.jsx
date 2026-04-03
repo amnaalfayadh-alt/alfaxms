@@ -1,4 +1,3 @@
-"use client";
 export default function Home() {
   const goToSection = (id) => {
     const el = document.getElementById(id);
@@ -233,11 +232,13 @@ const styles = {
   page: {
     position: "relative",
     minHeight: "100vh",
-    overflow: "hidden",
+    overflowX: "hidden",
+    overflowY: "auto",
     background: "linear-gradient(90deg, #050505 0%, #111111 55%, #1a1a1a 100%)",
     color: "#d9d9d9",
     fontFamily: "Arial, Helvetica, sans-serif",
     scrollBehavior: "smooth",
+    scrollSnapType: "y mandatory",
   },
   texture: {
     position: "fixed",
@@ -264,9 +265,9 @@ const styles = {
   },
   fixedNav: {
     position: "fixed",
-    top: 18,
-    left: 96,
-    right: 96,
+    top: 12,
+    left: 64,
+    right: 64,
     zIndex: 50,
     display: "flex",
     justifyContent: "space-between",
@@ -280,13 +281,20 @@ const styles = {
   },
   heroSection: {
     position: "relative",
-    padding: "120px 96px 72px",
+    padding: "88px 96px 40px",
     minHeight: "100vh",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
+    scrollSnapAlign: "start",
   },
   section: {
+    position: "relative",
+    padding: "88px 96px 40px",
+    minHeight: "100vh",
+    borderTop: "1px solid rgba(255,255,255,0.04)",
+    scrollSnapAlign: "start",
+  }, {
     position: "relative",
     padding: "120px 96px 72px",
     minHeight: "100vh",
@@ -325,7 +333,7 @@ const styles = {
     gridTemplateColumns: "1.15fr 0.85fr",
     gap: 64,
     alignItems: "center",
-    marginTop: 88,
+    marginTop: 34,
   },
   pill: {
     display: "inline-block",
@@ -456,7 +464,7 @@ const styles = {
     gridTemplateColumns: "1fr 1fr",
     gap: 56,
     alignItems: "start",
-    marginTop: 82,
+    marginTop: 36,
   },
   sectionEyebrow: {
     color: "#7f7f7f",
@@ -505,7 +513,7 @@ const styles = {
     gridTemplateColumns: "1.2fr 0.8fr",
     gap: 40,
     alignItems: "end",
-    marginTop: 82,
+    marginTop: 36,
   },
   servicesTitle: {
     margin: 0,
@@ -588,7 +596,7 @@ const styles = {
     gridTemplateColumns: "1fr 0.9fr",
     gap: 64,
     alignItems: "center",
-    marginTop: 82,
+    marginTop: 36,
   },
   contactCard: {
     background: "linear-gradient(180deg, rgba(43,43,43,0.86), rgba(28,28,28,0.92))",
@@ -613,4 +621,3 @@ const styles = {
     fontSize: 18,
   },
 };
-
