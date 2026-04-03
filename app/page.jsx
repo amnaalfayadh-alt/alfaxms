@@ -32,7 +32,7 @@ export default function Home() {
         </div>
       </nav>
 
-      <section style={styles.heroSection}>
+      <section id="home" style={{ ...styles.sectionBase, ...styles.heroSection }}>
         <div style={styles.heroGrid}>
           <div>
             <div style={styles.pill}>PRIVATE LUXURY AUTOMOTIVE STUDIO</div>
@@ -88,7 +88,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" style={styles.section}>
+      <section id="about" style={{ ...styles.sectionBase, ...styles.standardSection }}>
         <div style={styles.aboutGrid}>
           <div>
             <div style={styles.sectionEyebrow}>ABOUT</div>
@@ -132,7 +132,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services" style={styles.section}>
+      <section id="services" style={{ ...styles.sectionBase, ...styles.standardSection }}>
         <div style={styles.servicesHeader}>
           <div>
             <div style={styles.sectionEyebrow}>SERVICES</div>
@@ -225,7 +225,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" style={styles.section}>
+      <section id="contact" style={{ ...styles.sectionBase, ...styles.standardSection }}>
         <div style={styles.contactGrid}>
           <div>
             <div style={styles.sectionEyebrow}>CONTACT</div>
@@ -260,14 +260,14 @@ export default function Home() {
 const styles = {
   page: {
     position: "relative",
-    minHeight: "100vh",
+    height: "100vh",
+    overflowY: "scroll",
     overflowX: "hidden",
-    overflowY: "auto",
+    scrollSnapType: "y mandatory",
+    scrollBehavior: "smooth",
     background: "linear-gradient(90deg, #050505 0%, #111111 55%, #1a1a1a 100%)",
     color: "#d9d9d9",
     fontFamily: "Arial, Helvetica, sans-serif",
-    scrollBehavior: "smooth",
-    scrollSnapType: "y mandatory",
   },
 
   texture: {
@@ -313,22 +313,23 @@ const styles = {
     boxShadow: "0 0 30px rgba(255,255,255,0.03)",
   },
 
-  heroSection: {
-    position: "relative",
-    padding: "88px 96px 40px",
+  sectionBase: {
     minHeight: "100vh",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
     scrollSnapAlign: "start",
+    scrollSnapStop: "always",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    boxSizing: "border-box",
   },
 
-  section: {
-    position: "relative",
+  heroSection: {
     padding: "88px 96px 40px",
-    minHeight: "100vh",
+  },
+
+  standardSection: {
+    padding: "88px 96px 40px",
     borderTop: "1px solid rgba(255,255,255,0.04)",
-    scrollSnapAlign: "start",
   },
 
   brand: {
@@ -369,7 +370,8 @@ const styles = {
     gridTemplateColumns: "1.15fr 0.85fr",
     gap: 64,
     alignItems: "center",
-    marginTop: 34,
+    width: "100%",
+    marginTop: 0,
   },
 
   pill: {
@@ -517,7 +519,7 @@ const styles = {
     gridTemplateColumns: "1fr 1fr",
     gap: 56,
     alignItems: "start",
-    marginTop: 36,
+    width: "100%",
   },
 
   sectionEyebrow: {
@@ -574,7 +576,7 @@ const styles = {
     gridTemplateColumns: "1.2fr 0.8fr",
     gap: 40,
     alignItems: "end",
-    marginTop: 36,
+    width: "100%",
   },
 
   servicesTitle: {
@@ -599,6 +601,7 @@ const styles = {
     borderRadius: 34,
     padding: "34px 36px 42px",
     boxShadow: "0 18px 60px rgba(0,0,0,0.32)",
+    width: "100%",
   },
 
   serviceNumber: {
@@ -670,7 +673,7 @@ const styles = {
     gridTemplateColumns: "1fr 0.9fr",
     gap: 64,
     alignItems: "center",
-    marginTop: 36,
+    width: "100%",
   },
 
   contactCard: {
