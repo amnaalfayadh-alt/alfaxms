@@ -1,4 +1,5 @@
 "use client";
+
 export default function Home() {
   const goToSection = (id) => {
     const el = document.getElementById(id);
@@ -18,10 +19,17 @@ export default function Home() {
           <span style={styles.brandMain}>ALFAXMS</span>
           <span style={styles.brandLLC}>LLC</span>
         </div>
+
         <div style={styles.navLinks}>
-          <button type="button" onClick={() => goToSection("about")} style={styles.navButtonRed}>About</button>
-          <button type="button" onClick={() => goToSection("services")} style={styles.navButtonRed}>Services</button>
-          <button type="button" onClick={() => goToSection("contact")} style={styles.navButtonRed}>Contact</button>
+          <button type="button" onClick={() => goToSection("about")} style={styles.navButtonRed}>
+            About
+          </button>
+          <button type="button" onClick={() => goToSection("services")} style={styles.navButtonRed}>
+            Services
+          </button>
+          <button type="button" onClick={() => goToSection("contact")} style={styles.navButtonRed}>
+            Contact
+          </button>
         </div>
       </nav>
 
@@ -29,11 +37,14 @@ export default function Home() {
         <div style={styles.heroGrid}>
           <div>
             <div style={styles.pill}>PRIVATE LUXURY AUTOMOTIVE STUDIO</div>
+
             <h1 style={styles.heroTitle}>
               <span>ALFAXMS </span>
               <span style={styles.redText}>LLC</span>
             </h1>
+
             <div style={styles.heroLine} />
+
             <h2 style={styles.heroSubtitle}>
               High end automotive services
               <br />
@@ -41,24 +52,34 @@ export default function Home() {
               <br />
               experience.
             </h2>
+
             <p style={styles.heroText}>
               Private service. Exclusive clients. Elevated automotive experience shaped by
               precision, care, and a luxury standard in every detail.
             </p>
+
             <div style={styles.appointmentBadgeRed}>BY APPOINTMENT ONLY</div>
+
             <div style={styles.buttonRow}>
-              <button type="button" onClick={() => goToSection("services")} style={styles.primaryButton}>Explore Services</button>
-              <button type="button" onClick={() => goToSection("contact")} style={styles.secondaryButton}>Contact Us</button>
+              <button type="button" onClick={() => goToSection("services")} style={styles.primaryButton}>
+                Explore Services
+              </button>
+              <button type="button" onClick={() => goToSection("contact")} style={styles.secondaryButton}>
+                Contact Us
+              </button>
             </div>
           </div>
 
           <div style={styles.featureCard}>
             <div style={styles.cardEyebrow}>SIGNATURE STANDARD</div>
+
             <h3 style={styles.cardTitle}>Luxury without compromise.</h3>
+
             <p style={styles.cardParagraph}>
               A premium automotive service experience built around select clientele,
               elevated care, and meticulously directed execution.
             </p>
+
             <div style={styles.featureList}>
               <div style={styles.featureListItem}>Private client experience</div>
               <div style={styles.featureListItem}>Luxury vehicle transformation</div>
@@ -72,9 +93,11 @@ export default function Home() {
         <div style={styles.aboutGrid}>
           <div>
             <div style={styles.sectionEyebrow}>ABOUT</div>
+
             <h2 style={styles.sectionTitle}>
               About ALFAXMS <span style={styles.redText}>LLC</span>
             </h2>
+
             <p style={styles.aboutText}>
               ALFAXMS LLC is a private luxury automotive studio focused on high end
               vehicle transformation, premium presentation, and exclusive client
@@ -90,6 +113,7 @@ export default function Home() {
                 first impression.
               </p>
             </div>
+
             <div style={styles.infoCard}>
               <h3 style={styles.infoCardTitle}>Private Client Experience</h3>
               <p style={styles.infoCardText}>
@@ -97,6 +121,7 @@ export default function Home() {
                 discretion.
               </p>
             </div>
+
             <div style={styles.infoCard}>
               <h3 style={styles.infoCardTitle}>Refined Execution</h3>
               <p style={styles.infoCardText}>
@@ -112,12 +137,14 @@ export default function Home() {
         <div style={styles.servicesHeader}>
           <div>
             <div style={styles.sectionEyebrow}>SERVICES</div>
+
             <h2 style={styles.servicesTitle}>
               Specialized automotive services
               <br />
               with a premium standard.
             </h2>
           </div>
+
           <p style={styles.servicesIntro}>
             Designed for clients who value exclusivity, premium presentation, and an elevated
             automotive experience.
@@ -203,9 +230,11 @@ export default function Home() {
         <div style={styles.contactGrid}>
           <div>
             <div style={styles.sectionEyebrow}>CONTACT</div>
+
             <h2 style={styles.sectionTitle}>
               Contact ALFAXMS <span style={styles.redText}>LLC</span>
             </h2>
+
             <p style={styles.aboutText}>
               Reach out for private consultation, luxury automotive customization inquiries,
               and premium project planning. No walk in appointments required.
@@ -241,6 +270,7 @@ const styles = {
     scrollBehavior: "smooth",
     scrollSnapType: "y mandatory",
   },
+
   texture: {
     position: "fixed",
     inset: 0,
@@ -249,12 +279,14 @@ const styles = {
     backgroundImage:
       "repeating-linear-gradient(115deg, rgba(255,255,255,0.18) 0px, rgba(255,255,255,0.18) 1px, transparent 1px, transparent 8px)",
   },
+
   glowTop: {
     position: "fixed",
     inset: 0,
     pointerEvents: "none",
     background: "radial-gradient(circle at top center, rgba(255,255,255,0.08), transparent 35%)",
   },
+
   glowRight: {
     position: "fixed",
     top: 0,
@@ -264,6 +296,7 @@ const styles = {
     pointerEvents: "none",
     background: "radial-gradient(circle at right center, rgba(255,255,255,0.08), transparent 55%)",
   },
+
   fixedNav: {
     position: "fixed",
     top: 12,
@@ -280,6 +313,7 @@ const styles = {
     backdropFilter: "blur(10px)",
     boxShadow: "0 0 30px rgba(255,255,255,0.03)",
   },
+
   heroSection: {
     position: "relative",
     padding: "88px 96px 40px",
@@ -289,18 +323,15 @@ const styles = {
     justifyContent: "center",
     scrollSnapAlign: "start",
   },
+
   section: {
     position: "relative",
     padding: "88px 96px 40px",
     minHeight: "100vh",
     borderTop: "1px solid rgba(255,255,255,0.04)",
     scrollSnapAlign: "start",
-  }, {
-    position: "relative",
-    padding: "120px 96px 72px",
-    minHeight: "100vh",
-    borderTop: "1px solid rgba(255,255,255,0.04)",
   },
+
   brand: {
     display: "flex",
     alignItems: "center",
@@ -309,17 +340,21 @@ const styles = {
     fontSize: 14,
     fontWeight: 700,
   },
+
   brandMain: {
     color: "#d6d6d6",
   },
+
   brandLLC: {
     color: "#8d1010",
   },
+
   navLinks: {
     display: "flex",
     gap: 34,
     fontSize: 14,
   },
+
   navButtonRed: {
     color: "#c11212",
     background: "transparent",
@@ -329,6 +364,7 @@ const styles = {
     fontSize: 14,
     padding: 0,
   },
+
   heroGrid: {
     display: "grid",
     gridTemplateColumns: "1.15fr 0.85fr",
@@ -336,6 +372,7 @@ const styles = {
     alignItems: "center",
     marginTop: 34,
   },
+
   pill: {
     display: "inline-block",
     border: "1px solid rgba(255,255,255,0.08)",
@@ -348,6 +385,7 @@ const styles = {
     fontWeight: 700,
     marginBottom: 28,
   },
+
   heroTitle: {
     fontSize: 72,
     lineHeight: 1,
@@ -355,15 +393,18 @@ const styles = {
     fontWeight: 700,
     color: "#dddddd",
   },
+
   redText: {
     color: "#a81111",
   },
+
   heroLine: {
     width: 112,
     height: 2,
     background: "rgba(255,255,255,0.18)",
     margin: "28px 0 34px",
   },
+
   heroSubtitle: {
     margin: 0,
     fontSize: 38,
@@ -372,6 +413,7 @@ const styles = {
     fontWeight: 700,
     maxWidth: 760,
   },
+
   heroText: {
     marginTop: 34,
     fontSize: 18,
@@ -379,6 +421,7 @@ const styles = {
     color: "#9b9b9b",
     maxWidth: 760,
   },
+
   appointmentBadgeRed: {
     display: "inline-block",
     marginTop: 30,
@@ -391,11 +434,13 @@ const styles = {
     letterSpacing: "5px",
     fontWeight: 700,
   },
+
   buttonRow: {
     display: "flex",
     gap: 16,
     marginTop: 34,
   },
+
   primaryButton: {
     display: "inline-flex",
     alignItems: "center",
@@ -409,6 +454,7 @@ const styles = {
     border: "none",
     cursor: "pointer",
   },
+
   secondaryButton: {
     display: "inline-flex",
     alignItems: "center",
@@ -422,6 +468,7 @@ const styles = {
     minWidth: 160,
     cursor: "pointer",
   },
+
   featureCard: {
     background: "linear-gradient(180deg, rgba(38,38,38,0.82), rgba(22,22,22,0.9))",
     border: "1px solid rgba(255,255,255,0.08)",
@@ -429,6 +476,7 @@ const styles = {
     padding: 34,
     boxShadow: "0 18px 60px rgba(0,0,0,0.35)",
   },
+
   cardEyebrow: {
     color: "#7f7f7f",
     fontSize: 14,
@@ -436,22 +484,26 @@ const styles = {
     fontWeight: 700,
     marginBottom: 28,
   },
+
   cardTitle: {
     margin: 0,
     fontSize: 30,
     color: "#d7d7d7",
   },
+
   cardParagraph: {
     marginTop: 22,
     color: "#a4a4a4",
     fontSize: 16,
     lineHeight: 2,
   },
+
   featureList: {
     marginTop: 28,
     display: "grid",
     gap: 14,
   },
+
   featureListItem: {
     border: "1px solid rgba(255,255,255,0.08)",
     borderRadius: 18,
@@ -460,6 +512,7 @@ const styles = {
     color: "#9b9b9b",
     fontSize: 14,
   },
+
   aboutGrid: {
     display: "grid",
     gridTemplateColumns: "1fr 1fr",
@@ -467,6 +520,7 @@ const styles = {
     alignItems: "start",
     marginTop: 36,
   },
+
   sectionEyebrow: {
     color: "#7f7f7f",
     fontSize: 14,
@@ -474,12 +528,14 @@ const styles = {
     fontWeight: 700,
     marginBottom: 28,
   },
+
   sectionTitle: {
     margin: 0,
     fontSize: 64,
     lineHeight: 1.1,
     color: "#d7d7d7",
   },
+
   aboutText: {
     maxWidth: 720,
     marginTop: 30,
@@ -487,10 +543,12 @@ const styles = {
     fontSize: 18,
     lineHeight: 1.8,
   },
+
   aboutCards: {
     display: "grid",
     gap: 18,
   },
+
   infoCard: {
     background: "linear-gradient(180deg, rgba(53,53,53,0.82), rgba(36,36,36,0.9))",
     border: "1px solid rgba(255,255,255,0.08)",
@@ -498,17 +556,20 @@ const styles = {
     padding: 28,
     boxShadow: "0 18px 60px rgba(0,0,0,0.28)",
   },
+
   infoCardTitle: {
     margin: 0,
     fontSize: 22,
     color: "#d2d2d2",
   },
+
   infoCardText: {
     marginTop: 18,
     color: "#9d9d9d",
     fontSize: 16,
     lineHeight: 1.9,
   },
+
   servicesHeader: {
     display: "grid",
     gridTemplateColumns: "1.2fr 0.8fr",
@@ -516,12 +577,14 @@ const styles = {
     alignItems: "end",
     marginTop: 36,
   },
+
   servicesTitle: {
     margin: 0,
     fontSize: 64,
     lineHeight: 1.08,
     color: "#d8d8d8",
   },
+
   servicesIntro: {
     color: "#9e9e9e",
     fontSize: 18,
@@ -529,6 +592,7 @@ const styles = {
     maxWidth: 500,
     justifySelf: "end",
   },
+
   servicesPanel: {
     marginTop: 44,
     background: "rgba(10,10,10,0.85)",
@@ -537,23 +601,27 @@ const styles = {
     padding: "34px 36px 42px",
     boxShadow: "0 18px 60px rgba(0,0,0,0.32)",
   },
+
   serviceNumber: {
     color: "#7d7d7d",
     fontSize: 14,
     letterSpacing: "6px",
     marginBottom: 22,
   },
+
   servicesPanelTitle: {
     margin: 0,
     fontSize: 28,
     color: "#d5d5d5",
   },
+
   servicesColumns: {
     marginTop: 34,
     display: "grid",
     gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
     gap: "28px 44px",
   },
+
   columnTitle: {
     color: "#737373",
     fontSize: 14,
@@ -561,6 +629,7 @@ const styles = {
     fontWeight: 700,
     marginBottom: 16,
   },
+
   serviceList: {
     listStyle: "none",
     margin: 0,
@@ -568,6 +637,7 @@ const styles = {
     display: "grid",
     gap: 12,
   },
+
   serviceItem: {
     color: "#a2a2a2",
     fontSize: 15,
@@ -575,10 +645,12 @@ const styles = {
     position: "relative",
     paddingLeft: 16,
   },
+
   smallCardWrap: {
     marginTop: 34,
     maxWidth: 420,
   },
+
   smallServiceCard: {
     background: "rgba(18,18,18,0.82)",
     border: "1px solid rgba(255,255,255,0.06)",
@@ -586,12 +658,14 @@ const styles = {
     padding: 28,
     boxShadow: "0 18px 60px rgba(0,0,0,0.28)",
   },
+
   smallLine: {
     marginTop: 28,
     height: 1,
     width: "100%",
     background: "rgba(255,255,255,0.08)",
   },
+
   contactGrid: {
     display: "grid",
     gridTemplateColumns: "1fr 0.9fr",
@@ -599,6 +673,7 @@ const styles = {
     alignItems: "center",
     marginTop: 36,
   },
+
   contactCard: {
     background: "linear-gradient(180deg, rgba(43,43,43,0.86), rgba(28,28,28,0.92))",
     border: "1px solid rgba(255,255,255,0.08)",
@@ -607,9 +682,11 @@ const styles = {
     boxShadow: "0 18px 60px rgba(0,0,0,0.3)",
     minHeight: 280,
   },
+
   contactBlock: {
     marginBottom: 34,
   },
+
   contactLabel: {
     color: "#777777",
     fontSize: 14,
@@ -617,6 +694,7 @@ const styles = {
     fontWeight: 700,
     marginBottom: 16,
   },
+
   contactValue: {
     color: "#d7d7d7",
     fontSize: 18,
