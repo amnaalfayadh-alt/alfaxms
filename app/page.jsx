@@ -1,4 +1,51 @@
+import React from 'react';
 
+const UnderConstruction = () => {
+  return (
+    <div style={styles.container}>
+      <h1 style={styles.title}>Under Construction</h1>
+      <p style={styles.text}>
+        Our website is currently undergoing scheduled maintenance. 
+        We should be back shortly!
+      </p>
+      <div style={styles.content}>
+        <h2>Something Awesome is Coming</h2>
+        <p>Stay tuned!</p>
+      </div>
+    </div>
+  );
+};
+
+const styles = {
+  container: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: '100vh',
+    textAlign: 'center',
+    backgroundColor: '#f0f2f5',
+    padding: '20px',
+  },
+  title: {
+    fontSize: '3rem',
+    color: '#333',
+  },
+  text: {
+    fontSize: '1.2rem',
+    color: '#666',
+    margin: '20px 0',
+  },
+  content: {
+    marginTop: '40px',
+    padding: '20px',
+    border: '1px solid #ccc',
+    borderRadius: '10px',
+    backgroundColor: '#fff',
+  },
+};
+
+export default UnderConstruction;
 
 
 
