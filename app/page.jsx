@@ -1,3 +1,9 @@
+
+
+
+
+/* I commented this out for future use 
+
 "use client";
 export default function Home() {
   const goToSection = (id) => {
@@ -730,3 +736,4 @@ const styles = {
     fontSize: 18,
   },
 };
+*/
