@@ -93,10 +93,10 @@ export default function AlfaxmsLuxuryWebsite() {
           scroll-behavior: smooth;
           overscroll-behavior-y: contain;
           -webkit-overflow-scrolling: touch;
-          scroll-snap-type: y mandatory;
         }
 
         body {
+          overflow: hidden;
           margin: 0;
           background: #030303;
           color: #f4f4f5;
@@ -194,7 +194,10 @@ export default function AlfaxmsLuxuryWebsite() {
           max-width: 1460px;
           margin: 0 auto;
           padding: 0 24px;
+          height: 100vh;
+          overflow-y: auto;
           scroll-behavior: smooth;
+          scroll-snap-type: y mandatory; /* ONE PAGE SCROLL */
         }
 
         .section {
@@ -202,7 +205,7 @@ export default function AlfaxmsLuxuryWebsite() {
           display: flex;
           align-items: center;
           justify-content: center;
-          padding: 0 0;
+          padding: 0;
           scroll-snap-align: start;
         }
 
@@ -240,7 +243,7 @@ export default function AlfaxmsLuxuryWebsite() {
 
         .hero-title {
           margin: 20px 0 0;
-          font-size: 72px;
+          font-size: 64px;
           line-height: 0.95;
           letter-spacing: -0.05em;
           font-weight: 600;
@@ -258,7 +261,7 @@ export default function AlfaxmsLuxuryWebsite() {
         .hero-subtitle {
           max-width: 760px;
           margin: 0;
-          font-size: 48px;
+          font-size: 40px;
           line-height: 1.05;
           letter-spacing: -0.04em;
           font-weight: 600;
@@ -280,7 +283,7 @@ export default function AlfaxmsLuxuryWebsite() {
         .hero-text {
           max-width: 700px;
           margin: 20px 0 0;
-          font-size: 16px;
+          font-size: 15px;
           line-height: 1.7;
         }
 
@@ -350,7 +353,7 @@ export default function AlfaxmsLuxuryWebsite() {
 
         .card-title {
           margin: 0;
-          font-size: 40px;
+          font-size: 34px;
           line-height: 1.02;
           letter-spacing: -0.035em;
           font-weight: 500;
@@ -390,7 +393,7 @@ export default function AlfaxmsLuxuryWebsite() {
 
         .cta-title {
           margin: 0;
-          font-size: 38px;
+          font-size: 30px;
           line-height: 1.02;
           letter-spacing: -0.035em;
           font-weight: 500;
@@ -429,16 +432,8 @@ export default function AlfaxmsLuxuryWebsite() {
 
         .services-left h2,
         .about-left h2 {
-          margin: 0;
-          color: #f4f4f5;
-          font-weight: 500;
-          font-family: 'Cormorant Garamond', serif;
-        }
-
-        .services-eyebrow,
-        .why-title {
-          margin: 0 0 20px;
-          font-size: 14px;
+          max-width: 700px;
+          font-size: 56px;
           letter-spacing: 0.42em;
           text-transform: uppercase;
           color: #bef264;
@@ -446,7 +441,7 @@ export default function AlfaxmsLuxuryWebsite() {
 
         .services-left h2 {
           max-width: 270px;
-          font-size: 54px;
+          font-size: 46px;
           line-height: 0.95;
           letter-spacing: -0.03em;
         }
