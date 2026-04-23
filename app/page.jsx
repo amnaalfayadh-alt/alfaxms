@@ -92,7 +92,8 @@ export default function AlfaxmsLuxuryWebsite() {
         html {
           scroll-behavior: smooth;
           overscroll-behavior-y: contain;
-          -webkit-overflow-scrolling: touch; /* smoother on mobile */
+          -webkit-overflow-scrolling: touch;
+          scroll-snap-type: y mandatory;
         }
 
         body {
@@ -202,6 +203,7 @@ export default function AlfaxmsLuxuryWebsite() {
           align-items: center;
           justify-content: center;
           padding: 0 0;
+          scroll-snap-align: start;
         }
 
         .hero-grid,
@@ -209,8 +211,8 @@ export default function AlfaxmsLuxuryWebsite() {
           width: 100%;
           display: grid;
           grid-template-columns: 1.08fr 0.92fr;
-          gap: 56px;
-          align-items: center; /* center content vertically */
+          gap: 40px;
+          align-items: center;
           padding-top: 0;
         }
 
@@ -237,9 +239,9 @@ export default function AlfaxmsLuxuryWebsite() {
         }
 
         .hero-title {
-          margin: 28px 0 0;
-          font-size: 88px;
-          line-height: 0.9;
+          margin: 20px 0 0;
+          font-size: 72px;
+          line-height: 0.95;
           letter-spacing: -0.05em;
           font-weight: 600;
           color: #f4f4f5;
@@ -254,10 +256,10 @@ export default function AlfaxmsLuxuryWebsite() {
         }
 
         .hero-subtitle {
-          max-width: 860px;
+          max-width: 760px;
           margin: 0;
-          font-size: 64px;
-          line-height: 1.02;
+          font-size: 48px;
+          line-height: 1.05;
           letter-spacing: -0.04em;
           font-weight: 600;
           color: #f4f4f5;
@@ -276,8 +278,10 @@ export default function AlfaxmsLuxuryWebsite() {
         }
 
         .hero-text {
-          max-width: 780px;
-          margin: 28px 0 0;
+          max-width: 700px;
+          margin: 20px 0 0;
+          font-size: 16px;
+          line-height: 1.7;
         }
 
         .appointment {
