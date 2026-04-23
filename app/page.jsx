@@ -91,18 +91,24 @@ export default function AlfaxmsLuxuryWebsite() {
 
         html {
           scroll-behavior: smooth;
+          overscroll-behavior-y: contain;
+          -webkit-overflow-scrolling: touch; /* smoother on mobile */
         }
 
         body {
           margin: 0;
           background: #030303;
           color: #f4f4f5;
-          font-family: 'Cormorant Garamond', serif;
+          font-family: 'Inter', system-ui, sans-serif;
         }
 
         a {
           color: inherit;
           text-decoration: none;
+        }
+
+        .display-font {
+          font-family: 'Cormorant Garamond', serif;
         }
 
         .site-root {
@@ -137,7 +143,7 @@ export default function AlfaxmsLuxuryWebsite() {
           position: sticky;
           top: 0;
           z-index: 50;
-          padding: 16px 24px 0;
+          padding: 12px 24px 0;
         }
 
         .navbar {
@@ -186,14 +192,16 @@ export default function AlfaxmsLuxuryWebsite() {
         .page {
           max-width: 1460px;
           margin: 0 auto;
-          padding: 0 24px 60px;
+          padding: 0 24px;
+          scroll-behavior: smooth;
         }
 
         .section {
           min-height: 100vh;
           display: flex;
           align-items: center;
-          padding: 92px 0 56px;
+          justify-content: center;
+          padding: 0 0;
         }
 
         .hero-grid,
@@ -202,7 +210,8 @@ export default function AlfaxmsLuxuryWebsite() {
           display: grid;
           grid-template-columns: 1.08fr 0.92fr;
           gap: 56px;
-          align-items: center;
+          align-items: center; /* center content vertically */
+          padding-top: 0;
         }
 
         .services-grid {
@@ -210,7 +219,8 @@ export default function AlfaxmsLuxuryWebsite() {
           display: grid;
           grid-template-columns: 290px minmax(0, 1fr);
           gap: 40px;
-          align-items: center;
+          align-items: center; /* center content vertically */
+          padding-top: 0;
         }
 
         .pill {
@@ -233,6 +243,7 @@ export default function AlfaxmsLuxuryWebsite() {
           letter-spacing: -0.05em;
           font-weight: 600;
           color: #f4f4f5;
+          font-family: 'Cormorant Garamond', serif;
         }
 
         .hero-line {
@@ -250,6 +261,7 @@ export default function AlfaxmsLuxuryWebsite() {
           letter-spacing: -0.04em;
           font-weight: 600;
           color: #f4f4f5;
+          font-family: 'Cormorant Garamond', serif;
         }
 
         .hero-text,
@@ -257,9 +269,10 @@ export default function AlfaxmsLuxuryWebsite() {
         .card-text,
         .service-text,
         .contact-value {
-          font-size: 19px;
-          line-height: 1.9;
+          font-size: 18px;
+          line-height: 1.8;
           color: #d4d4d8;
+          font-family: 'Inter', system-ui, sans-serif;
         }
 
         .hero-text {
@@ -284,9 +297,10 @@ export default function AlfaxmsLuxuryWebsite() {
         }
 
         .right-stack {
+          justify-content: center;
           display: flex;
           flex-direction: column;
-          gap: 20px;
+          gap: 16px;
         }
 
         .glass-card {
@@ -337,6 +351,7 @@ export default function AlfaxmsLuxuryWebsite() {
           letter-spacing: -0.035em;
           font-weight: 500;
           color: #f4f4f5;
+          font-family: 'Cormorant Garamond', serif;
         }
 
         .card-text {
@@ -356,8 +371,9 @@ export default function AlfaxmsLuxuryWebsite() {
           border: 1px solid rgba(255,255,255,0.07);
           background: linear-gradient(180deg, rgba(18,18,18,0.98), rgba(8,8,8,0.98));
           padding: 16px 18px;
-          font-size: 18px;
+          font-size: 17px;
           color: #e4e4e7;
+          font-family: 'Inter', system-ui, sans-serif;
         }
 
         .cta-banner {
@@ -375,6 +391,7 @@ export default function AlfaxmsLuxuryWebsite() {
           letter-spacing: -0.035em;
           font-weight: 500;
           color: #f4f4f5;
+          font-family: 'Cormorant Garamond', serif;
         }
 
         .cta-button {
@@ -386,11 +403,12 @@ export default function AlfaxmsLuxuryWebsite() {
           border: 1px solid rgba(132,204,22,0.7);
           background: rgba(0,0,0,0.55);
           color: #bef264;
-          font-size: 14px;
+          font-size: 13px;
           letter-spacing: 0.36em;
           text-transform: uppercase;
           font-weight: 600;
           padding: 12px 24px;
+          font-family: 'Inter', system-ui, sans-serif;
         }
 
         .contact-row {
@@ -410,6 +428,7 @@ export default function AlfaxmsLuxuryWebsite() {
           margin: 0;
           color: #f4f4f5;
           font-weight: 500;
+          font-family: 'Cormorant Garamond', serif;
         }
 
         .services-eyebrow,
@@ -431,9 +450,10 @@ export default function AlfaxmsLuxuryWebsite() {
         .services-left p {
           max-width: 240px;
           margin: 28px 0 0;
-          font-size: 18px;
+          font-size: 17px;
           line-height: 1.8;
           color: #a1a1aa;
+          font-family: 'Inter', system-ui, sans-serif;
         }
 
         .services-right {
@@ -504,6 +524,7 @@ export default function AlfaxmsLuxuryWebsite() {
           margin: 0;
           color: #f4f4f5;
           font-weight: 500;
+          font-family: 'Cormorant Garamond', serif;
         }
 
         .service-main-title {
@@ -536,9 +557,10 @@ export default function AlfaxmsLuxuryWebsite() {
           display: flex;
           flex-direction: column;
           gap: 10px;
-          font-size: 17px;
-          line-height: 1.75;
+          font-size: 16px;
+          line-height: 1.7;
           color: #e4e4e7;
+          font-family: 'Inter', system-ui, sans-serif;
         }
 
         .service-footer-text,
@@ -546,9 +568,10 @@ export default function AlfaxmsLuxuryWebsite() {
           position: relative;
           z-index: 1;
           margin: 12px 0 0;
-          font-size: 18px;
-          line-height: 1.8;
+          font-size: 17px;
+          line-height: 1.75;
           color: #a1a1aa;
+          font-family: 'Inter', system-ui, sans-serif;
         }
 
         .about-left h2 {
@@ -576,10 +599,11 @@ export default function AlfaxmsLuxuryWebsite() {
 
         .about-signature {
           margin: 16px 0 0;
-          font-size: 14px;
+          font-size: 13px;
           letter-spacing: 0.3em;
           text-transform: uppercase;
           color: #71717a;
+          font-family: 'Inter', system-ui, sans-serif;
         }
 
         .why-wrap {
@@ -598,8 +622,9 @@ export default function AlfaxmsLuxuryWebsite() {
           border: 1px solid rgba(255,255,255,0.07);
           background: linear-gradient(180deg, rgba(17,17,17,0.98), rgba(8,8,8,0.98));
           padding: 14px 16px;
-          font-size: 18px;
+          font-size: 17px;
           color: #e4e4e7;
+          font-family: 'Inter', system-ui, sans-serif;
         }
 
         .about-right {
@@ -609,6 +634,20 @@ export default function AlfaxmsLuxuryWebsite() {
         }
 
         @media (max-width: 1100px) {
+          body {
+            overflow: auto;
+          }
+
+          .page {
+            height: auto;
+            overflow-y: visible;
+            scroll-snap-type: none;
+          }
+
+          .section {
+            min-height: auto;
+            padding: 86px 0 40px;
+          }
           .hero-grid,
           .about-grid,
           .services-grid {
