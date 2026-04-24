@@ -80,22 +80,55 @@ export default function AlfaxmsLuxuryWebsite() {
         }
 
         .contact-box {
+          position: relative;
+          overflow: hidden;
           margin-top: 0;
-          min-height: 280px; /* bigger height */
+          min-height: 300px;
           width: 100%;
-          max-width: 540px; /* wider */
-          padding: 40px 44px; /* more padding */
+          max-width: 560px;
+          padding: 44px 48px;
           display: grid;
           align-content: center;
           justify-items: center;
           text-align: center;
-          gap: 18px; /* more spacing inside */
+          gap: 18px;
           justify-self: end;
-          border: 1px solid rgba(255,242,0,0.7);
-          border-radius: 24px;
-          background: linear-gradient(145deg, rgba(20,20,20,0.95), rgba(10,10,10,0.95));
-          box-shadow: 0 0 35px rgba(255,242,0,0.25);
+          border-radius: 26px;
+          /* glass */
+          background: rgba(18,18,18,0.6);
+          backdrop-filter: blur(14px) saturate(120%);
+          -webkit-backdrop-filter: blur(14px) saturate(120%);
+          /* inner glow */
+          box-shadow: inset 0 0 30px rgba(255,242,0,0.12), 0 10px 30px rgba(0,0,0,0.6);
           transition: all 0.3s ease;
+        }
+
+        .contact-box::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          padding: 1.5px; /* border thickness */
+          border-radius: 26px;
+          background: linear-gradient(120deg, rgba(255,242,0,0.9), rgba(255,242,0,0.2), rgba(255,242,0,0.9));
+          -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+          -webkit-mask-composite: xor;
+                  mask-composite: exclude;
+          pointer-events: none;
+        }
+
+        .contact-box::after {
+          content: '';
+          position: absolute;
+          inset: -30%;
+          background: radial-gradient(circle at 50% 40%, rgba(255,242,0,0.18), transparent 60%);
+          filter: blur(30px);
+          opacity: 0.6;
+          pointer-events: none;
+        }
+
+        .contact-box:hover {
+          transform: translateY(-4px);
+          box-shadow: inset 0 0 36px rgba(255,242,0,0.16), 0 16px 40px rgba(0,0,0,0.7);
         }
 
         .contact-box:hover {
