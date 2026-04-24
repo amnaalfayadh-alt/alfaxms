@@ -4,9 +4,12 @@ export default function AlfaxmsLuxuryWebsite() {
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
-        * { box-sizing: border-box; }
+        * {
+          box-sizing: border-box;
+        }
 
-        html, body {
+        html,
+        body {
           margin: 0;
           width: 100%;
           height: 100%;
@@ -16,7 +19,14 @@ export default function AlfaxmsLuxuryWebsite() {
           color: #fff;
         }
 
-        :root { --accent: #FFD400; }
+        :root {
+          --accent: #FFD400;
+        }
+
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
 
         .site-root {
           width: 100vw;
@@ -48,7 +58,9 @@ export default function AlfaxmsLuxuryWebsite() {
           line-height: 0.95;
         }
 
-        .accent { color: var(--accent); }
+        .accent {
+          color: var(--accent);
+        }
 
         .subtitle {
           font-size: clamp(17px, 1.55vw, 24px);
@@ -214,12 +226,36 @@ export default function AlfaxmsLuxuryWebsite() {
         }
 
         @media (max-width: 900px) {
-          html, body { overflow: auto; }
-          .site-root { height: auto; min-height: 100vh; overflow: visible; padding: 24px; }
-          .container { height: auto; grid-template-rows: auto; }
-          .top, .about-wrap { grid-template-columns: 1fr; }
-          .services-grid { width: 100%; grid-template-columns: 1fr 1fr; }
-          .about-card { grid-template-columns: 1fr; }
+          html,
+          body {
+            overflow: auto;
+          }
+
+          .site-root {
+            height: auto;
+            min-height: 100vh;
+            overflow: visible;
+            padding: 24px;
+          }
+
+          .container {
+            height: auto;
+            grid-template-rows: auto;
+          }
+
+          .top,
+          .about-wrap {
+            grid-template-columns: 1fr;
+          }
+
+          .services-grid {
+            width: 100%;
+            grid-template-columns: 1fr 1fr;
+          }
+
+          .about-card {
+            grid-template-columns: 1fr;
+          }
         }
       `}</style>
 
@@ -242,7 +278,8 @@ export default function AlfaxmsLuxuryWebsite() {
             <div className="contact-text">Exclusive service for serious clientele.</div>
             <div className="label">Contact</div>
             <div className="contact-text">
-              info@alfaxms.com<br />
+              <a href="mailto:info@alfaxms.com">info@alfaxms.com</a>
+              <br />
               Wylie, Texas
             </div>
           </div>
