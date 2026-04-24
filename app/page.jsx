@@ -81,20 +81,20 @@ export default function AlfaxmsLuxuryWebsite() {
 
         .contact-box {
           margin-top: 0;
-          min-height: 220px; /* bigger box */
+          min-height: 280px; /* bigger height */
           width: 100%;
-          max-width: 460px; /* wider */
-          padding: 32px 36px;
+          max-width: 540px; /* wider */
+          padding: 40px 44px; /* more padding */
           display: grid;
           align-content: center;
           justify-items: center;
           text-align: center;
-          gap: 14px;
+          gap: 18px; /* more spacing inside */
           justify-self: end;
           border: 1px solid rgba(255,242,0,0.7);
-          border-radius: 22px;
+          border-radius: 24px;
           background: linear-gradient(145deg, rgba(20,20,20,0.95), rgba(10,10,10,0.95));
-          box-shadow: 0 0 30px rgba(255,242,0,0.2);
+          box-shadow: 0 0 35px rgba(255,242,0,0.25);
           transition: all 0.3s ease;
         }
 
@@ -106,16 +106,16 @@ export default function AlfaxmsLuxuryWebsite() {
 
         .label {
           color: var(--accent);
-          font-size: 12px;
-          letter-spacing: 0.24em;
+          font-size: 13px; /* slightly bigger */
+          letter-spacing: 0.26em;
           text-transform: uppercase;
           font-weight: 700;
         }
 
         .contact-text {
           color: #f5f5f5;
-          font-size: 14px;
-          line-height: 1.6;
+          font-size: 16px; /* bigger text */
+          line-height: 1.7;
         }
 
         .services-section {
