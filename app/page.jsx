@@ -47,8 +47,8 @@ export default function AlfaxmsLuxuryWebsite() {
 
         .top {
           display: grid;
-          grid-template-columns: 1.15fr 0.85fr;
-          gap: 48px;
+          grid-template-columns: 1fr 0.6fr;
+          gap: 40px;
           align-items: center;
         }
 
@@ -78,24 +78,28 @@ export default function AlfaxmsLuxuryWebsite() {
           line-height: 1.65;
         }
 
-        .contact-box,
-        .service-card,
-        .about-card {
-          border: 1px solid var(--line);
-          border-radius: 18px;
-          background: rgba(18,18,18,0.9);
-          box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
-        }
-
         .contact-box {
-          min-height: 150px;
-          max-width: 360px;
-          padding: 22px 28px;
+          min-height: 170px;
+          width: 100%;
+          max-width: 380px;
+          padding: 28px 32px;
           display: grid;
           align-content: center;
           justify-items: center;
           text-align: center;
-          gap: 10px;
+          gap: 12px;
+          justify-self: end;
+          border: 1px solid rgba(255,242,0,0.6);
+          border-radius: 20px;
+          background: linear-gradient(145deg, rgba(20,20,20,0.95), rgba(10,10,10,0.95));
+          box-shadow: 0 0 25px rgba(255,242,0,0.15);
+          transition: all 0.3s ease;
+        }
+
+        .contact-box:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 0 35px rgba(255,242,0,0.25);
+          border-color: var(--accent);
         }
 
         .label {
@@ -142,6 +146,9 @@ export default function AlfaxmsLuxuryWebsite() {
           align-items: center;
           justify-content: center;
           padding: 12px;
+          border: 1px solid var(--line);
+          border-radius: 16px;
+          background: rgba(18,18,18,0.9);
         }
 
         .service-title {
@@ -162,10 +169,10 @@ export default function AlfaxmsLuxuryWebsite() {
         }
 
         .about-wrap {
-          width: 100%; /* full width */
+          width: 100%;
           display: grid;
           grid-template-columns: 1fr 1fr;
-          gap: 60px;
+          gap: 40px;
           align-items: start;
         }
 
@@ -204,19 +211,22 @@ export default function AlfaxmsLuxuryWebsite() {
 
         .about-card-stack {
           display: grid;
-          gap: 18px; /* more vertical rhythm */
+          gap: 16px;
+          max-width: 520px;
           justify-self: end;
           width: 100%;
-          max-width: 420px; /* slightly less wide */
         }
 
         .about-card {
-          min-height: 78px;
-          padding: 18px 22px;
+          min-height: 70px;
+          padding: 16px 20px;
           display: grid;
-          grid-template-columns: 0.85fr 1.15fr;
+          grid-template-columns: 0.8fr 1.2fr;
           align-items: center;
-          gap: 16px;
+          gap: 18px;
+          border: 1px solid var(--line);
+          border-radius: 16px;
+          background: rgba(18,18,18,0.9);
         }
 
         .about-card h3 {
