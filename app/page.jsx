@@ -48,8 +48,8 @@ export default function AlfaxmsLuxuryWebsite() {
         .top {
           display: grid;
           grid-template-columns: 1fr 0.6fr;
-          gap: 40px;
-          align-items: center;
+          gap: 24px; /* reduced gap */
+          align-items: start; /* pull contact box up */
         }
 
         .title {
@@ -66,7 +66,7 @@ export default function AlfaxmsLuxuryWebsite() {
         .subtitle {
           font-size: clamp(17px, 1.55vw, 24px);
           color: #f2f2f2;
-          margin: 18px 0 10px;
+          margin: 10px 0 6px; /* tighter spacing */
           line-height: 1.35;
           max-width: 760px;
         }
@@ -75,10 +75,12 @@ export default function AlfaxmsLuxuryWebsite() {
           font-size: clamp(12px, 1vw, 15px);
           color: #b8b8b8;
           max-width: 720px;
-          line-height: 1.65;
+          line-height: 1.5;
+          margin-bottom: 0;
         }
 
         .contact-box {
+          margin-top: 6px;
           min-height: 170px;
           width: 100%;
           max-width: 380px;
@@ -172,7 +174,7 @@ export default function AlfaxmsLuxuryWebsite() {
           width: 100%;
           display: grid;
           grid-template-columns: 1fr 1fr;
-          gap: 40px;
+          gap: 18px; /* reduced space between about and cards */
           align-items: start;
         }
 
@@ -182,16 +184,16 @@ export default function AlfaxmsLuxuryWebsite() {
         }
 
         .about-left h2 {
-          margin: 0 0 12px;
+          margin: 0 0 8px;
           font-size: clamp(20px, 2vw, 32px);
           line-height: 1;
         }
 
         .about-left p {
-          margin: 0;
+          margin: 0 0 6px;
           font-size: 14px;
           color: #f0f0f0;
-          line-height: 1.55;
+          line-height: 1.45;
         }
 
         .signature {
@@ -211,7 +213,7 @@ export default function AlfaxmsLuxuryWebsite() {
 
         .about-card-stack {
           display: grid;
-          gap: 16px;
+          gap: 10px; /* tighter spacing between cards */
           max-width: 520px;
           justify-self: end;
           width: 100%;
