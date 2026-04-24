@@ -46,8 +46,8 @@ export default function AlfaxmsLuxuryWebsite() {
 
         .top {
           display: grid;
-          grid-template-columns: 1.15fr 0.85fr;
-          gap: 48px;
+          grid-template-columns: 1.35fr 0.65fr; /* more space for text */
+          gap: 60px;
           align-items: center;
         }
 
@@ -63,18 +63,18 @@ export default function AlfaxmsLuxuryWebsite() {
         }
 
         .subtitle {
-          font-size: clamp(17px, 1.55vw, 24px);
+          font-size: clamp(20px, 1.9vw, 30px); /* bigger */
           color: #f2f2f2;
-          margin: 18px 0 10px;
-          line-height: 1.35;
-          max-width: 760px;
+          margin: 20px 0 12px;
+          line-height: 1.4;
+          max-width: 900px; /* wider */
         }
 
         .desc {
-          font-size: clamp(12px, 1vw, 15px);
+          font-size: clamp(14px, 1.2vw, 18px); /* bigger */
           color: #b8b8b8;
-          max-width: 720px;
-          line-height: 1.65;
+          max-width: 880px; /* wider */
+          line-height: 1.7;
         }
 
         .contact-box,
@@ -87,13 +87,15 @@ export default function AlfaxmsLuxuryWebsite() {
         }
 
         .contact-box {
-          min-height: 150px;
+          min-height: 160px;
           padding: 22px 28px;
           display: grid;
           align-content: center;
           justify-items: center;
           text-align: center;
           gap: 10px;
+          justify-self: end; /* push right */
+          transform: translateY(-8px); /* slight lift for tension */
         }
 
         .label {
@@ -127,18 +129,20 @@ export default function AlfaxmsLuxuryWebsite() {
         }
 
         .services-grid {
-          width: min(980px, 82vw);
+          width: min(900px, 80vw);
           display: grid;
           grid-template-columns: repeat(3, 1fr);
-          gap: 14px;
+          gap: 16px; /* more breathing room */
         }
 
         .service-card {
-          height: 74px;
+          height: 88px; /* thicker */
           display: flex;
           align-items: center;
           justify-content: center;
-          padding: 12px;
+          padding: 14px;
+          border-width: 1.5px; /* slightly stronger edge */
+          box-shadow: 0 10px 22px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.05);
         }
 
         .service-title {
@@ -158,9 +162,9 @@ export default function AlfaxmsLuxuryWebsite() {
         }
 
         .about-wrap {
-          width: min(1150px, 86vw);
+          width: min(1000px, 84vw);
           display: grid;
-          grid-template-columns: 0.9fr 1.1fr;
+          grid-template-columns: 1fr 0.8fr; /* right side narrower */
           gap: 46px;
           align-items: center;
         }
@@ -200,7 +204,10 @@ export default function AlfaxmsLuxuryWebsite() {
 
         .about-card-stack {
           display: grid;
-          gap: 14px;
+          gap: 18px; /* more vertical rhythm */
+          justify-self: end;
+          width: 100%;
+          max-width: 420px; /* slightly less wide */
         }
 
         .about-card {
@@ -214,7 +221,7 @@ export default function AlfaxmsLuxuryWebsite() {
 
         .about-card h3 {
           margin: 0;
-          font-size: 17px;
+          font-size: 18px;
           line-height: 1.2;
         }
 
@@ -222,7 +229,7 @@ export default function AlfaxmsLuxuryWebsite() {
           margin: 0;
           color: #cfcfcf;
           font-size: 14px;
-          line-height: 1.5;
+          line-height: 1.6;
         }
 
         @media (max-width: 900px) {
