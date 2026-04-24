@@ -91,16 +91,13 @@ export default function AlfaxmsLuxuryWebsite() {
 
         html {
           scroll-behavior: smooth;
-          overscroll-behavior-y: contain;
-          -webkit-overflow-scrolling: touch;
         }
 
         body {
-          overflow: hidden;
           margin: 0;
           background: #030303;
           color: #f4f4f5;
-          font-family: 'Inter', system-ui, sans-serif;
+          font-family: Arial, Helvetica, sans-serif;
         }
 
         a {
@@ -108,96 +105,71 @@ export default function AlfaxmsLuxuryWebsite() {
           text-decoration: none;
         }
 
-        .display-font {
-          font-family: 'Cormorant Garamond', serif;
-        }
-
         .site-root {
           min-height: 100vh;
           background:
             radial-gradient(circle at 82% 14%, rgba(255,255,255,0.08), transparent 26%),
-            linear-gradient(90deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.01) 46%, rgba(255,255,255,0.07) 100%),
             linear-gradient(180deg, #050505 0%, #020202 100%);
-          position: relative;
-          overflow-x: hidden;
-        }
-
-        .site-root::before {
-          content: '';
-          position: fixed;
-          inset: 0;
-          pointer-events: none;
-          background:
-            linear-gradient(90deg, transparent 0%, rgba(200, 200, 200, 0.08) 50%, transparent 100%),
-            repeating-linear-gradient(
-              -32deg,
-              rgba(0, 0, 0, 0.16) 0px,
-              rgba(0, 0, 0, 0.16) 3px,
-              transparent 3px,
-              transparent 22px
-            );
-          mix-blend-mode: screen;
-          opacity: 0.6;
         }
 
         .navbar-wrap {
+          padding: 16px 24px 0;
           position: sticky;
           top: 0;
-          z-index: 50;
-          padding: 12px 24px 0;
+          z-index: 20;
+          background: linear-gradient(180deg, rgba(3,3,3,0.95), rgba(3,3,3,0.45), transparent);
+          backdrop-filter: blur(6px);
         }
 
         .navbar {
           max-width: 1460px;
           margin: 0 auto;
-          height: 58px;
-          padding: 0 28px;
           display: flex;
           align-items: center;
           justify-content: space-between;
+          padding: 18px 28px;
           border-radius: 999px;
           border: 1px solid rgba(255,255,255,0.06);
           background: rgba(7,7,7,0.92);
-          box-shadow: 0 18px 40px rgba(0,0,0,0.28), inset 0 1px 0 rgba(255,255,255,0.05);
-          backdrop-filter: blur(10px);
+        }
+
+        .brand,
+        .hero-tag,
+        .nav-links,
+        .eyebrow,
+        .section-label,
+        .service-box-title,
+        .contact-label,
+        .about-signature {
+          font-family: 'Montserrat', Arial, Helvetica, sans-serif;
         }
 
         .brand {
+          letter-spacing: 0.3em;
           font-size: 14px;
-          font-weight: 600;
-          letter-spacing: 0.38em;
           text-transform: uppercase;
           color: #f4f4f5;
+          font-weight: 600;
         }
 
-        .accent-gradient {
-          background: linear-gradient(180deg, #bef264 0%, #84cc16 100%);
-          -webkit-background-clip: text;
-          background-clip: text;
-          color: transparent;
+        .brand-accent,
+        .accent {
+          color: #a3e635;
         }
 
         .nav-links {
           display: flex;
-          gap: 28px;
-          font-size: 14px;
-          letter-spacing: 0.24em;
+          gap: 30px;
+          font-size: 12px;
+          letter-spacing: 0.2em;
           text-transform: uppercase;
-          color: #d4d4d8;
-        }
-
-        .nav-links a:hover {
-          color: #bef264;
+          color: #f4f4f5;
         }
 
         .page {
           max-width: 1460px;
           margin: 0 auto;
-          padding: 0 24px;
-          height: 100vh;
-          overflow-y: auto;
-          scroll-behavior: smooth;
-          scroll-snap-type: y mandatory; /* ONE PAGE SCROLL */
+          padding: 28px 24px 80px;
         }
 
         .section {
@@ -205,292 +177,106 @@ export default function AlfaxmsLuxuryWebsite() {
           display: flex;
           align-items: center;
           justify-content: center;
-          padding: 0;
-          scroll-snap-align: start;
+          padding: 20px 0 40px;
         }
 
         .hero-grid,
         .about-grid {
           width: 100%;
           display: grid;
-          grid-template-columns: 1.08fr 0.92fr;
-          gap: 40px;
+          grid-template-columns: 1fr 1fr;
+          gap: 48px;
           align-items: center;
-          padding-top: 0;
         }
 
         .services-grid {
           width: 100%;
           display: grid;
-          grid-template-columns: 290px minmax(0, 1fr);
-          gap: 40px;
-          align-items: center; /* center content vertically */
-          padding-top: 0;
+          grid-template-columns: 280px 1fr;
+          gap: 36px;
+          align-items: center;
         }
 
-        .pill {
-          width: fit-content;
+        .hero-tag {
+          display: inline-block;
+          padding: 16px 32px;
           border-radius: 999px;
           border: 1px solid rgba(255,255,255,0.07);
           background: linear-gradient(180deg, rgba(17,17,17,0.98), rgba(8,8,8,0.98));
-          box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
-          padding: 12px 24px;
-          font-size: 13px;
-          letter-spacing: 0.46em;
-          text-transform: uppercase;
           color: #d4d4d8;
-        }
-
-        .hero-title {
-          margin: 20px 0 0;
-          font-size: 64px;
-          line-height: 0.95;
-          letter-spacing: -0.05em;
-          font-weight: 600;
-          color: #f4f4f5;
-          font-family: 'Cormorant Garamond', serif;
-        }
-
-        .hero-line {
-          width: 96px;
-          height: 1px;
-          margin: 24px 0;
-          background: linear-gradient(90deg, #52525b 0%, transparent 100%);
-        }
-
-        .hero-subtitle {
-          max-width: 760px;
-          margin: 0;
-          font-size: 40px;
-          line-height: 1.05;
-          letter-spacing: -0.04em;
-          font-weight: 600;
-          color: #f4f4f5;
-          font-family: 'Cormorant Garamond', serif;
-        }
-
-        .hero-text,
-        .about-text,
-        .card-text,
-        .service-text,
-        .contact-value {
-          font-size: 18px;
-          line-height: 1.8;
-          color: #d4d4d8;
-          font-family: 'Inter', system-ui, sans-serif;
-        }
-
-        .hero-text {
-          max-width: 700px;
-          margin: 20px 0 0;
           font-size: 15px;
-          line-height: 1.7;
-        }
-
-        .appointment {
-          display: inline-flex;
-          width: fit-content;
-          margin-top: 28px;
-          padding: 12px 24px;
-          border-radius: 999px;
-          border: 1px solid rgba(132,204,22,0.7);
-          background: rgba(0,0,0,0.55);
-          color: #bef264;
-          font-size: 14px;
-          letter-spacing: 0.36em;
+          letter-spacing: 0.5em;
           text-transform: uppercase;
-          font-weight: 600;
-          box-shadow: 0 0 24px rgba(132,204,22,0.12);
         }
 
-        .right-stack {
-          justify-content: center;
-          display: flex;
-          flex-direction: column;
-          gap: 16px;
+        .hero h1,
+        .hero h2,
+        .card h3,
+        .service-header h3,
+        .service-footer h3,
+        .services-left h2,
+        .about-left h2,
+        .about-card h3,
+        .cta-banner h3 {
+          font-family: 'Montserrat', Arial, Helvetica, sans-serif;
         }
 
-        .glass-card {
-          position: relative;
-          overflow: hidden;
-          border-radius: 32px;
-          border: 1px solid rgba(255,255,255,0.07);
-          background: linear-gradient(180deg, rgba(26,26,26,0.9), rgba(11,11,11,0.92));
-          box-shadow: 0 18px 48px rgba(0,0,0,0.34), inset 0 1px 0 rgba(255,255,255,0.05);
-          backdrop-filter: blur(10px);
-          padding: 32px 36px;
-        }
-
-        .glass-card::before {
-          content: '';
-          position: absolute;
-          inset: 0;
-          pointer-events: none;
-          background:
-            repeating-linear-gradient(
-              -32deg,
-              rgba(190,190,190,0.08) 0px,
-              rgba(190,190,190,0.08) 2px,
-              transparent 2px,
-              transparent 18px
-            ),
-            linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.04) 14%, transparent 25%);
-          opacity: 0.6;
-        }
-
-        .card-inner {
-          position: relative;
-          z-index: 1;
-        }
-
-        .eyebrow {
-          margin: 0 0 22px;
-          font-size: 14px;
-          letter-spacing: 0.44em;
-          text-transform: uppercase;
-          color: #71717a;
-        }
-
-        .card-title {
-          margin: 0;
-          font-size: 34px;
-          line-height: 1.02;
-          letter-spacing: -0.035em;
-          font-weight: 500;
+        .hero h1 {
+          font-size: 82px;
+          margin: 24px 0 0;
+          letter-spacing: 0.06em;
+          line-height: 0.95;
           color: #f4f4f5;
-          font-family: 'Cormorant Garamond', serif;
+          text-transform: uppercase;
+          font-weight: 700;
         }
 
-        .card-text {
+        .hero h2 {
+          font-size: 52px;
+          margin: 24px 0 0;
+          line-height: 1.1;
+          font-weight: 600;
+          color: #f4f4f5;
+          max-width: 780px;
+        }
+
+        .hero p,
+        .card p,
+        .services-left p,
+        .service-list,
+        .service-footer p,
+        .cta-banner p,
+        .about-left p,
+        .about-card p,
+        .contact-value {
           margin: 18px 0 0;
           color: #a1a1aa;
+          font-size: 24px;
+          line-height: 1.9;
         }
 
-        .mini-pills {
-          display: flex;
-          flex-direction: column;
-          gap: 14px;
-          margin-top: 28px;
-        }
-
-        .mini-pill {
-          border-radius: 18px;
-          border: 1px solid rgba(255,255,255,0.07);
-          background: linear-gradient(180deg, rgba(18,18,18,0.98), rgba(8,8,8,0.98));
-          padding: 16px 18px;
-          font-size: 17px;
-          color: #e4e4e7;
-          font-family: 'Inter', system-ui, sans-serif;
-        }
-
-        .cta-banner {
-          border-radius: 20px;
-          background: rgba(0,0,0,0.8);
-          box-shadow: 0 18px 40px rgba(0,0,0,0.28);
-          padding: 28px 32px;
-          text-align: center;
-        }
-
-        .cta-title {
-          margin: 0;
-          font-size: 30px;
-          line-height: 1.02;
-          letter-spacing: -0.035em;
-          font-weight: 500;
-          color: #f4f4f5;
-          font-family: 'Cormorant Garamond', serif;
-        }
-
-        .cta-button {
-          margin-top: 18px;
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          border-radius: 999px;
-          border: 1px solid rgba(132,204,22,0.7);
-          background: rgba(0,0,0,0.55);
-          color: #bef264;
-          font-size: 13px;
-          letter-spacing: 0.36em;
-          text-transform: uppercase;
-          font-weight: 600;
-          padding: 12px 24px;
-          font-family: 'Inter', system-ui, sans-serif;
-        }
-
-        .contact-row {
-          margin-bottom: 18px;
-        }
-
-        .contact-label {
-          margin: 0 0 8px;
-          font-size: 13px;
-          letter-spacing: 0.4em;
-          text-transform: uppercase;
-          color: #71717a;
-        }
-
-        .services-left h2,
-        .about-left h2 {
-          max-width: 700px;
-          font-size: 56px;
-          letter-spacing: 0.42em;
-          text-transform: uppercase;
-          color: #bef264;
-        }
-
-        .services-left h2 {
-          max-width: 270px;
-          font-size: 46px;
-          line-height: 0.95;
-          letter-spacing: -0.03em;
-        }
-
-        .services-left p {
-          max-width: 240px;
-          margin: 28px 0 0;
-          font-size: 17px;
-          line-height: 1.8;
-          color: #a1a1aa;
-          font-family: 'Inter', system-ui, sans-serif;
-        }
-
-        .services-right {
-          display: flex;
-          flex-direction: column;
-          gap: 16px;
-        }
-
+        .glass-card,
         .service-header,
-        .service-footer {
+        .service-box,
+        .service-footer,
+        .about-card,
+        .cta-banner,
+        .contact-card {
+          background: rgba(20,20,20,0.9);
+          border-radius: 28px;
+          padding: 32px;
+          border: 1px solid rgba(255,255,255,0.06);
+          box-shadow: 0 18px 48px rgba(0,0,0,0.34);
           position: relative;
           overflow: hidden;
-          border-radius: 32px;
-          border: 1px solid rgba(255,255,255,0.07);
-          background: linear-gradient(180deg, rgba(26,26,26,0.9), rgba(11,11,11,0.92));
-          box-shadow: 0 18px 48px rgba(0,0,0,0.34), inset 0 1px 0 rgba(255,255,255,0.05);
-          padding: 24px 26px;
         }
 
-        .service-grid {
-          display: grid;
-          grid-template-columns: repeat(3, minmax(0, 1fr));
-          gap: 16px;
-        }
-
-        .service-box {
-          position: relative;
-          overflow: hidden;
-          border-radius: 26px;
-          border: 1px solid rgba(255,255,255,0.07);
-          background: linear-gradient(180deg, rgba(26,26,26,0.9), rgba(11,11,11,0.92));
-          box-shadow: 0 18px 48px rgba(0,0,0,0.34), inset 0 1px 0 rgba(255,255,255,0.05);
-          padding: 22px 20px;
-        }
-
-        .service-box::before,
+        .glass-card::before,
         .service-header::before,
-        .service-footer::before {
+        .service-box::before,
+        .service-footer::before,
+        .about-card::before,
+        .contact-card::before {
           content: '';
           position: absolute;
           inset: 0;
@@ -502,91 +288,148 @@ export default function AlfaxmsLuxuryWebsite() {
             transparent 2px,
             transparent 18px
           );
-          opacity: 0.6;
+          opacity: 0.55;
+        }
+
+        .eyebrow,
+        .section-label,
+        .service-box-title,
+        .contact-label,
+        .about-signature {
+          margin: 0 0 18px;
+          color: #71717a;
+          font-size: 12px;
+          letter-spacing: 0.42em;
+          text-transform: uppercase;
+        }
+
+        .card h3,
+        .service-header h3,
+        .service-footer h3,
+        .about-card h3,
+        .cta-banner h3 {
+          margin: 0;
+          font-size: 34px;
+          line-height: 1.02;
+          color: #f4f4f5;
+          font-weight: 600;
+        }
+
+        .pill-list,
+        .right-stack,
+        .services-right,
+        .about-right {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .pill {
+          padding: 14px 16px;
+          border-radius: 16px;
+          background: #111;
+          border: 1px solid rgba(255,255,255,0.05);
+          color: #f4f4f5;
+          font-size: 16px;
+        }
+
+        .appointment {
+          display: inline-flex;
+          width: fit-content;
+          margin-top: 24px;
+          padding: 12px 24px;
+          border-radius: 999px;
+          border: 1px solid rgba(132,204,22,0.7);
+          background: rgba(0,0,0,0.55);
+          color: #a3e635;
+          font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+          font-size: 12px;
+          letter-spacing: 0.36em;
+          text-transform: uppercase;
+          font-weight: 600;
+        }
+
+        .cta-banner {
+          text-align: center;
+        }
+
+        .cta-button {
+          margin-top: 18px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 999px;
+          border: 1px solid rgba(132,204,22,0.7);
+          background: rgba(0,0,0,0.55);
+          color: #a3e635;
+          font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+          font-size: 12px;
+          letter-spacing: 0.36em;
+          text-transform: uppercase;
+          font-weight: 600;
+          padding: 12px 24px;
+        }
+
+        .contact-row {
+          margin-bottom: 18px;
+          position: relative;
+          z-index: 1;
+        }
+
+        .contact-label {
+          margin-bottom: 8px;
+        }
+
+        .services-left h2 {
+          font-size: 44px;
+          line-height: 1.05;
+          margin: 0;
+          color: #ffffff;
+          text-transform: uppercase;
+        }
+
+        .services-left p {
+          max-width: 240px;
+        }
+
+        .service-grid,
+        .why-grid {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 16px;
         }
 
         .service-index {
           position: relative;
           z-index: 1;
           margin: 0 0 8px;
-          font-size: 14px;
-          letter-spacing: 0.38em;
-          text-transform: uppercase;
           color: #71717a;
-        }
-
-        .service-main-title,
-        .service-footer-title,
-        .about-card-title {
-          position: relative;
-          z-index: 1;
-          margin: 0;
-          color: #f4f4f5;
-          font-weight: 500;
-          font-family: 'Cormorant Garamond', serif;
-        }
-
-        .service-main-title {
-          font-size: 36px;
-          line-height: 1.02;
-          letter-spacing: -0.03em;
-        }
-
-        .service-footer-title,
-        .about-card-title {
-          font-size: 34px;
-          line-height: 1.05;
-          letter-spacing: -0.03em;
+          font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+          font-size: 12px;
+          letter-spacing: 0.36em;
+          text-transform: uppercase;
         }
 
         .service-box-title {
           position: relative;
           z-index: 1;
-          margin: 0 0 14px;
-          font-size: 13px;
-          letter-spacing: 0.36em;
-          text-transform: uppercase;
-          font-weight: 600;
-          color: #bef264;
+          color: #a3e635;
+          margin-bottom: 14px;
         }
 
-        .service-list {
+        .service-list,
+        .service-footer p,
+        .about-card p {
           position: relative;
           z-index: 1;
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
-          font-size: 16px;
-          line-height: 1.7;
-          color: #e4e4e7;
-          font-family: 'Inter', system-ui, sans-serif;
-        }
-
-        .service-footer-text,
-        .about-card-text {
-          position: relative;
-          z-index: 1;
-          margin: 12px 0 0;
-          font-size: 17px;
-          line-height: 1.75;
-          color: #a1a1aa;
-          font-family: 'Inter', system-ui, sans-serif;
+          margin-top: 12px;
         }
 
         .about-left h2 {
-          max-width: 700px;
-          font-size: 66px;
+          font-size: 56px;
           line-height: 1.02;
-          letter-spacing: -0.03em;
-        }
-
-        .accent {
-          color: #84cc16;
-        }
-
-        .about-text {
-          max-width: 690px;
-          margin: 24px 0 0;
+          margin: 0;
+          color: #ffffff;
         }
 
         .about-divider {
@@ -597,89 +440,48 @@ export default function AlfaxmsLuxuryWebsite() {
         }
 
         .about-signature {
-          margin: 16px 0 0;
-          font-size: 13px;
-          letter-spacing: 0.3em;
-          text-transform: uppercase;
-          color: #71717a;
-          font-family: 'Inter', system-ui, sans-serif;
-        }
-
-        .why-wrap {
-          margin-top: 32px;
-          max-width: 640px;
+          margin-top: 16px;
         }
 
         .why-grid {
-          display: grid;
           grid-template-columns: repeat(2, minmax(0, 1fr));
-          gap: 12px;
+          margin-top: 12px;
         }
 
         .why-item {
-          border-radius: 18px;
-          border: 1px solid rgba(255,255,255,0.07);
-          background: linear-gradient(180deg, rgba(17,17,17,0.98), rgba(8,8,8,0.98));
           padding: 14px 16px;
-          font-size: 17px;
-          color: #e4e4e7;
-          font-family: 'Inter', system-ui, sans-serif;
-        }
-
-        .about-right {
-          display: flex;
-          flex-direction: column;
-          gap: 16px;
+          border-radius: 16px;
+          background: #111;
+          border: 1px solid rgba(255,255,255,0.05);
+          color: #f4f4f5;
+          font-size: 16px;
         }
 
         @media (max-width: 1100px) {
-          body {
-            overflow: auto;
-          }
-
-          .page {
-            height: auto;
-            overflow-y: visible;
-            scroll-snap-type: none;
+          .hero-grid,
+          .about-grid,
+          .services-grid,
+          .service-grid,
+          .why-grid {
+            grid-template-columns: 1fr;
           }
 
           .section {
             min-height: auto;
-            padding: 86px 0 40px;
-          }
-          .hero-grid,
-          .about-grid,
-          .services-grid {
-            grid-template-columns: 1fr;
-          }
-
-          .service-grid,
-          .why-grid {
-            grid-template-columns: 1fr 1fr;
-          }
-
-          .hero-title {
-            font-size: 72px;
-          }
-
-          .hero-subtitle {
-            font-size: 50px;
-          }
-
-          .about-left h2,
-          .services-left h2 {
-            max-width: none;
+            padding: 60px 0;
           }
         }
 
         @media (max-width: 780px) {
           .navbar {
-            padding: 0 18px;
+            padding: 16px 18px;
+            flex-direction: column;
+            gap: 14px;
           }
 
           .nav-links {
-            gap: 14px;
-            font-size: 12px;
+            gap: 16px;
+            font-size: 11px;
           }
 
           .page,
@@ -688,44 +490,28 @@ export default function AlfaxmsLuxuryWebsite() {
             padding-right: 16px;
           }
 
-          .hero-title {
-            font-size: 54px;
+          .hero h1 {
+            font-size: 46px;
           }
 
-          .hero-subtitle {
-            font-size: 38px;
-          }
-
-          .card-title,
-          .cta-title,
-          .service-main-title,
-          .service-footer-title,
-          .about-card-title,
-          .about-left h2,
-          .services-left h2 {
-            font-size: 34px;
-          }
-
-          .service-grid,
-          .why-grid {
-            grid-template-columns: 1fr;
-          }
-
-          .glass-card,
-          .service-header,
-          .service-box,
-          .service-footer {
-            padding: 22px 18px;
+          .hero h2,
+          .card h3,
+          .service-header h3,
+          .service-footer h3,
+          .about-card h3,
+          .cta-banner h3,
+          .services-left h2,
+          .about-left h2 {
+            font-size: 28px;
           }
         }
       `}</style>
 
       <div className="navbar-wrap">
         <div className="navbar">
-          <a href="#home" className="brand">
-            ALFAXMS <span className="accent-gradient">LLC</span>
-          </a>
-
+          <div className="brand">
+            ALFAXMS <span className="brand-accent">LLC</span>
+          </div>
           <div className="nav-links">
             {navItems.map((item) => (
               <a key={item.key} href={`#${item.key}`}>
@@ -736,61 +522,58 @@ export default function AlfaxmsLuxuryWebsite() {
         </div>
       </div>
 
-      <main className="page">
+      <div className="page">
         <section id="home" className="section">
           <div className="hero-grid">
             <div>
-              <div className="pill">Private Luxury Automotive Studio</div>
-              <h1 className="hero-title">
-                ALFAXMS <span className="accent-gradient">LLC</span>
+              <div className="hero-tag">Private Luxury Automotive Studio</div>
+              <h1>
+                ALFAXMS <span className="brand-accent">LLC</span>
               </h1>
-              <div className="hero-line" />
-              <h2 className="hero-subtitle">
-                High end automotive services delivered with a luxury level client experience.
-              </h2>
-              <p className="hero-text">
+              <h2>High end automotive services delivered with a luxury level client experience.</h2>
+              <p>
                 Private service. Exclusive clients. Elevated automotive experience shaped by precision, care, and a luxury standard in every detail.
               </p>
-              <div className="appointment">By appointment only</div>
+
+              {/* MOVED HERE UNDER PARAGRAPH */}
+              <div className="glass-card" style={{ marginTop: '24px' }}>
+                <p className="eyebrow">Signature Standard</p>
+                <h3>Luxury without compromise.</h3>
+                <p>
+                  A premium automotive service experience built around select clientele, elevated care, and meticulously directed execution.
+                </p>
+                <div className="pill-list">
+                  {standards.map((item) => (
+                    <div key={item} className="pill">
+                      {item}
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
 
             <div className="right-stack">
-              <div className="glass-card">
-                <div className="card-inner">
-                  <p className="eyebrow">Signature Standard</p>
-                  <h3 className="card-title">Luxury without compromise.</h3>
-                  <p className="card-text">
-                    A premium automotive service experience built around select clientele, elevated care, and meticulously directed execution.
-                  </p>
-                  <div className="mini-pills">
-                    {standards.map((item) => (
-                      <div key={item} className="mini-pill">
-                        {item}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
+
+              {/* MOVED ABOVE CTA */}
+              <div className="appointment">By appointment only</div>
 
               <div className="cta-banner">
-                <p className="cta-title">Make Sure Your Vehicle Is Taken Care Of</p>
+                <h3>Make Sure Your Vehicle Is Taken Care Of</h3>
                 <button className="cta-button">Contact Us</button>
               </div>
 
-              <div className="glass-card">
-                <div className="card-inner">
-                  <div className="contact-row">
-                    <p className="contact-label">Email</p>
-                    <p className="contact-value">Info@alfaxms.com</p>
-                  </div>
-                  <div className="contact-row">
-                    <p className="contact-label">Location</p>
-                    <p className="contact-value">Wylie, Texas</p>
-                  </div>
-                  <div className="contact-row" style={{ marginBottom: 0 }}>
-                    <p className="contact-label">Availability</p>
-                    <p className="contact-value">Private bookings</p>
-                  </div>
+              <div className="contact-card">
+                <div className="contact-row">
+                  <div className="contact-label">Email</div>
+                  <div className="contact-value">Info@alfaxms.com</div>
+                </div>
+                <div className="contact-row">
+                  <div className="contact-label">Location</div>
+                  <div className="contact-value">Wylie, Texas</div>
+                </div>
+                <div className="contact-row" style={{ marginBottom: 0 }}>
+                  <div className="contact-label">Availability</div>
+                  <div className="contact-value">Private bookings</div>
                 </div>
               </div>
             </div>
@@ -800,7 +583,7 @@ export default function AlfaxmsLuxuryWebsite() {
         <section id="services" className="section">
           <div className="services-grid">
             <div className="services-left">
-              <p className="services-eyebrow">Services</p>
+              <div className="section-label">Services</div>
               <h2>Specialized automotive services with a premium standard.</h2>
               <p>
                 Designed for clients who value exclusivity, premium presentation, and an elevated automotive experience.
@@ -809,14 +592,14 @@ export default function AlfaxmsLuxuryWebsite() {
 
             <div className="services-right">
               <div className="service-header">
-                <p className="service-index">01</p>
-                <h3 className="service-main-title">Automotive Performance Garage</h3>
+                <div className="service-index">01</div>
+                <h3>Automotive Performance Garage</h3>
               </div>
 
               <div className="service-grid">
                 {serviceGroups.map((group) => (
                   <div key={group.title} className="service-box">
-                    <h4 className="service-box-title">{group.title}</h4>
+                    <div className="service-box-title">{group.title}</div>
                     <div className="service-list">
                       {group.items.map((item) => (
                         <div key={item}>{item}</div>
@@ -827,9 +610,9 @@ export default function AlfaxmsLuxuryWebsite() {
               </div>
 
               <div className="service-footer">
-                <p className="service-index">02</p>
-                <h3 className="service-footer-title">Private Client Consulting</h3>
-                <p className="service-footer-text">
+                <div className="service-index">02</div>
+                <h3>Private Client Consulting</h3>
+                <p>
                   High touch consultation for selective clients seeking a tailored and discreet automotive experience.
                 </p>
               </div>
@@ -843,14 +626,31 @@ export default function AlfaxmsLuxuryWebsite() {
               <h2>
                 About ALFAXMS <span className="accent">LLC</span>
               </h2>
-              <p className="about-text hero-text">
+              <p>
                 Since 2020, ALFAXMS LLC has operated as a private luxury automotive studio delivering refined performance and high end vehicle transformation for a select clientele. Built on precision, discretion, and uncompromising standards, every project reflects a level of execution designed for those who expect more than traditional automotive service.
               </p>
               <div className="about-divider" />
-              <p className="about-signature">Private. Precise. Elevated.</p>
+              <div className="about-signature">
+                Private. Precise. Elevated.
+              </div>
 
-              <div className="why-wrap">
-                <p className="why-title">Why ALFAXMS</p>
+              {/* SIGNATURE LIKE IMAGE STYLE */}
+              <div style={{
+                marginTop: '12px',
+                textAlign: 'right',
+                fontFamily: 'Edwardian Script ITC, Apple Chancery, Snell Roundhand, cursive',
+                fontSize: '60px',
+                fontWeight: 400,
+                fontStyle: 'normal',
+                color: '#e5e5e5',
+                opacity: 0.92,
+                letterSpacing: '1px'
+              }}>
+                Alfayadh
+              </div>
+
+              <div style={{ marginTop: '28px' }}>
+                <div className="section-label">Why ALFAXMS</div>
                 <div className="why-grid">
                   {whyItems.map((item) => (
                     <div key={item} className="why-item">
@@ -863,17 +663,15 @@ export default function AlfaxmsLuxuryWebsite() {
 
             <div className="about-right">
               {aboutCards.map((card) => (
-                <div key={card.title} className="glass-card">
-                  <div className="card-inner">
-                    <h3 className="about-card-title">{card.title}</h3>
-                    <p className="about-card-text">{card.body}</p>
-                  </div>
+                <div key={card.title} className="about-card">
+                  <h3>{card.title}</h3>
+                  <p>{card.body}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
-      </main>
+      </div>
     </div>
   )
 }
