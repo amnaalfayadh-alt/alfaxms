@@ -81,7 +81,6 @@ export default function AlfaxmsLuxuryWebsite() {
 
         .contact-box {
           position: relative;
-          overflow: hidden;
           margin-top: 0;
           min-height: 300px;
           width: 100%;
@@ -94,13 +93,26 @@ export default function AlfaxmsLuxuryWebsite() {
           gap: 18px;
           justify-self: end;
           border-radius: 26px;
-          /* glass */
-          background: rgba(18,18,18,0.6);
-          backdrop-filter: blur(14px) saturate(120%);
-          -webkit-backdrop-filter: blur(14px) saturate(120%);
-          /* inner glow */
-          box-shadow: inset 0 0 30px rgba(255,242,0,0.12), 0 10px 30px rgba(0,0,0,0.6);
+
+          /* SIMPLE + VISIBLE (fix) */
+          background: rgba(18,18,18,0.85);
+          border: 1.5px solid var(--accent);
+
+          /* glow you can actually see */
+          box-shadow: 
+            0 0 20px rgba(255,242,0,0.25),
+            0 0 60px rgba(255,242,0,0.15),
+            inset 0 0 20px rgba(255,242,0,0.08);
+
           transition: all 0.3s ease;
+        }
+
+        .contact-box:hover {
+          transform: translateY(-4px);
+          box-shadow: 
+            0 0 30px rgba(255,242,0,0.35),
+            0 0 80px rgba(255,242,0,0.2),
+            inset 0 0 24px rgba(255,242,0,0.12);
         }
 
         .contact-box::before {
