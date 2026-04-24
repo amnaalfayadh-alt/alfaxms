@@ -81,6 +81,8 @@ export default function AlfaxmsLuxuryWebsite() {
 
         .contact-box {
           position: relative;
+          isolation: isolate;
+          overflow: hidden;
           margin-top: 0;
           min-height: 300px;
           width: 100%;
@@ -93,60 +95,71 @@ export default function AlfaxmsLuxuryWebsite() {
           gap: 18px;
           justify-self: end;
           border-radius: 26px;
-
-          /* SIMPLE + VISIBLE (fix) */
-          background: rgba(18,18,18,0.85);
-          border: 1.5px solid var(--accent);
-
-          /* glow you can actually see */
-          box-shadow: 
-            0 0 20px rgba(255,242,0,0.25),
-            0 0 60px rgba(255,242,0,0.15),
-            inset 0 0 20px rgba(255,242,0,0.08);
-
-          transition: all 0.3s ease;
-        }
-
-        .contact-box:hover {
-          transform: translateY(-4px);
-          box-shadow: 
-            0 0 30px rgba(255,242,0,0.35),
-            0 0 80px rgba(255,242,0,0.2),
-            inset 0 0 24px rgba(255,242,0,0.12);
+          background: linear-gradient(145deg, rgba(22,22,22,0.95), rgba(8,8,8,0.98));
+          border: 2px solid var(--accent);
+          box-shadow:
+            0 0 28px rgba(255,242,0,0.42),
+            0 0 95px rgba(255,242,0,0.22),
+            inset 0 0 30px rgba(255,242,0,0.14);
+          animation: contactPulse 3.2s ease-in-out infinite;
         }
 
         .contact-box::before {
           content: '';
           position: absolute;
-          inset: 0;
-          padding: 1.5px; /* border thickness */
-          border-radius: 26px;
-          background: linear-gradient(120deg, rgba(255,242,0,0.9), rgba(255,242,0,0.2), rgba(255,242,0,0.9));
-          -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-          -webkit-mask-composite: xor;
-                  mask-composite: exclude;
-          pointer-events: none;
+          inset: -2px;
+          z-index: -1;
+          border-radius: 28px;
+          background: linear-gradient(120deg, transparent 0%, rgba(255,242,0,0.15) 30%, rgba(255,242,0,0.8) 50%, rgba(255,242,0,0.15) 70%, transparent 100%);
+          background-size: 220% 220%;
+          animation: borderShine 3.8s linear infinite;
         }
 
         .contact-box::after {
           content: '';
           position: absolute;
-          inset: -30%;
-          background: radial-gradient(circle at 50% 40%, rgba(255,242,0,0.18), transparent 60%);
-          filter: blur(30px);
-          opacity: 0.6;
+          top: -40%;
+          left: -80%;
+          width: 60%;
+          height: 180%;
+          background: linear-gradient(90deg, transparent, rgba(255,255,255,0.16), transparent);
+          transform: rotate(22deg);
+          animation: shineSweep 4.5s ease-in-out infinite;
           pointer-events: none;
         }
 
         .contact-box:hover {
           transform: translateY(-4px);
-          box-shadow: inset 0 0 36px rgba(255,242,0,0.16), 0 16px 40px rgba(0,0,0,0.7);
+          box-shadow:
+            0 0 40px rgba(255,242,0,0.55),
+            0 0 120px rgba(255,242,0,0.3),
+            inset 0 0 38px rgba(255,242,0,0.18);
         }
 
-        .contact-box:hover {
-          transform: translateY(-4px);
-          box-shadow: 0 0 35px rgba(255,242,0,0.25);
-          border-color: var(--accent);
+        @keyframes contactPulse {
+          0%, 100% {
+            box-shadow:
+              0 0 24px rgba(255,242,0,0.36),
+              0 0 80px rgba(255,242,0,0.18),
+              inset 0 0 24px rgba(255,242,0,0.1);
+          }
+          50% {
+            box-shadow:
+              0 0 40px rgba(255,242,0,0.58),
+              0 0 130px rgba(255,242,0,0.32),
+              inset 0 0 38px rgba(255,242,0,0.18);
+          }
+        }
+
+        @keyframes borderShine {
+          0% { background-position: 0% 50%; }
+          100% { background-position: 220% 50%; }
+        }
+
+        @keyframes shineSweep {
+          0%, 35% { left: -80%; opacity: 0; }
+          50% { opacity: 1; }
+          75%, 100% { left: 130%; opacity: 0; }
         }
 
         .label {
