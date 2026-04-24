@@ -92,16 +92,11 @@ export default function AlfaxmsLuxuryWebsite() {
         }
 
         .contact-box {
-          min-height: 160px;
-          padding: 22px 28px;
+          min-height: 220px; /* bigger */
+          width: 100%;
+          max-width: 420px; /* wider */
+          padding: 28px 34px;
           display: grid;
-          align-content: center;
-          justify-items: center;
-          text-align: center;
-          gap: 10px;
-          justify-self: end; /* push right */
-          transform: translateY(-8px); /* slight lift for tension */
-        }
 
         .label {
           color: var(--accent);
