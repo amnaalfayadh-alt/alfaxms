@@ -97,6 +97,13 @@ export default function AlfaxmsLuxuryWebsite() {
           max-width: 420px; /* wider */
           padding: 28px 34px;
           display: grid;
+          align-content: center;
+          justify-items: center;
+          text-align: center;
+          gap: 12px;
+          justify-self: end;
+          transform: translateY(-8px);
+        }
 
         .label {
           color: var(--accent);
@@ -129,20 +136,20 @@ export default function AlfaxmsLuxuryWebsite() {
         }
 
         .services-grid {
-          width: min(900px, 80vw);
+          width: 100%;
           display: grid;
           grid-template-columns: repeat(3, 1fr);
-          gap: 16px; /* more breathing room */
+          gap: 16px;
         }
 
         .service-card {
-          height: 88px; /* thicker */
+          height: 90px;
           display: flex;
           align-items: center;
           justify-content: center;
           padding: 14px;
-          border-width: 1.5px; /* slightly stronger edge */
-          box-shadow: 0 10px 22px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.05);
+          border-width: 1px;
+          box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
         }
 
         .service-title {
