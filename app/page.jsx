@@ -198,21 +198,6 @@ export default function AlfaxmsLuxuryWebsite() {
           line-height: 1.45;
         }
 
-        .signature {
-          margin-top: 14px;
-          font-family: 'Edwardian Script ITC', 'Apple Chancery', 'Snell Roundhand', cursive;
-          font-size: clamp(42px, 4.5vw, 76px);
-          color: var(--accent);
-          line-height: 0.85;
-        }
-
-        .founder {
-          margin-top: 10px;
-          font-size: 12px;
-          letter-spacing: 0.22em;
-          text-transform: uppercase;
-        }
-
         .about-card-stack {
           display: grid;
           gap: 10px; /* tighter spacing between cards */
@@ -299,7 +284,7 @@ export default function AlfaxmsLuxuryWebsite() {
             <div className="contact-text">Exclusive service for serious clientele.</div>
             <div className="label">Contact</div>
             <div className="contact-text">
-              <a href="mailto:info@alfaxms.com">info@alfaxms.com</a>
+              <a href="mailto:info@alfaxms.com?subject=ALFAXMS Inquiry&body=Hello, I would like to inquire about your services." target="_blank" rel="noopener noreferrer">info@alfaxms.com</a>
               <br />
               Wylie, Texas
             </div>
@@ -323,8 +308,7 @@ export default function AlfaxmsLuxuryWebsite() {
             <div className="about-left">
               <h2>About ALFAXMS</h2>
               <p>Private luxury automotive studio delivering high end services for select clientele.</p>
-              <div className="signature">Alfayadh</div>
-              <div className="founder">Founder</div>
+              
             </div>
 
             <div className="about-card-stack">
