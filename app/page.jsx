@@ -21,6 +21,7 @@ export default function AlfaxmsLuxuryWebsite() {
 
         :root {
           --accent: #FFF200;
+          --line: #9a9a9a; /* light gray lines */
         }
 
         a {
@@ -46,8 +47,8 @@ export default function AlfaxmsLuxuryWebsite() {
 
         .top {
           display: grid;
-          grid-template-columns: 1.35fr 0.65fr; /* more space for text */
-          gap: 60px;
+          grid-template-columns: 1.5fr 0.5fr; /* give even more space to text */
+          gap: 70px;
           align-items: center;
         }
 
@@ -63,24 +64,28 @@ export default function AlfaxmsLuxuryWebsite() {
         }
 
         .subtitle {
-          font-size: clamp(20px, 1.9vw, 30px); /* bigger */
+          font-size: clamp(17px, 1.6vw, 24px);
           color: #f2f2f2;
-          margin: 20px 0 12px;
-          line-height: 1.4;
-          max-width: 900px; /* wider */
+          margin: 18px 0 10px;
+          line-height: 1.35;
+          max-width: 1100px;
+          border-bottom: 1px solid var(--line); /* added line */
+          padding-bottom: 10px;
         }
 
         .desc {
-          font-size: clamp(14px, 1.2vw, 18px); /* bigger */
+          font-size: clamp(12px, 1vw, 15px);
           color: #b8b8b8;
-          max-width: 880px; /* wider */
-          line-height: 1.7;
+          max-width: 1100px;
+          line-height: 1.65;
+          border-bottom: 1px solid var(--line); /* added line */
+          padding-bottom: 10px;
         }
 
         .contact-box,
         .service-card,
         .about-card {
-          border: 1px solid var(--accent);
+          border: 1px solid var(--line);
           border-radius: 18px;
           background: rgba(18,18,18,0.9);
           box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
@@ -170,7 +175,7 @@ export default function AlfaxmsLuxuryWebsite() {
         }
 
         .about-left {
-          border-left: 2px solid var(--accent);
+          border-left: 2px solid var(--line);
           padding-left: 26px;
         }
 
