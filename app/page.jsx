@@ -41,8 +41,8 @@ export default function AlfaxmsLuxuryWebsite() {
           width: 100%;
           height: 100%;
           display: grid;
-          grid-template-rows: 31% 34% 35%;
-          gap: 18px;
+          grid-template-rows: auto auto auto; /* remove forced centering */
+          gap: 28px;
         }
 
         .top {
@@ -114,9 +114,10 @@ export default function AlfaxmsLuxuryWebsite() {
 
         .services-section {
           display: grid;
-          align-content: center;
-          justify-items: center;
-          gap: 14px;
+          align-content: start; /* no vertical centering */
+          justify-items: stretch;
+          gap: 18px;
+          width: 100%;
         }
 
         .section-title {
@@ -129,10 +130,10 @@ export default function AlfaxmsLuxuryWebsite() {
         }
 
         .services-grid {
-          width: min(980px, 82vw);
+          width: 100%; /* full width */
           display: grid;
           grid-template-columns: repeat(3, 1fr);
-          gap: 14px;
+          gap: 18px;
         }
 
         .service-card {
@@ -155,16 +156,17 @@ export default function AlfaxmsLuxuryWebsite() {
 
         .about-full {
           display: flex;
-          align-items: center;
-          justify-content: center;
+          align-items: flex-start; /* move up */
+          justify-content: space-between;
+          width: 100%;
         }
 
         .about-wrap {
-          width: min(1000px, 84vw);
+          width: 100%; /* full width */
           display: grid;
-          grid-template-columns: 1fr 0.8fr; /* right side narrower */
-          gap: 46px;
-          align-items: center;
+          grid-template-columns: 1fr 1fr;
+          gap: 60px;
+          align-items: start;
         }
 
         .about-left {
