@@ -47,8 +47,8 @@ export default function AlfaxmsLuxuryWebsite() {
 
         .top {
           display: grid;
-          grid-template-columns: 1.5fr 0.5fr; /* give even more space to text */
-          gap: 70px;
+          grid-template-columns: 1.15fr 0.85fr;
+          gap: 48px;
           align-items: center;
         }
 
@@ -64,22 +64,18 @@ export default function AlfaxmsLuxuryWebsite() {
         }
 
         .subtitle {
-          font-size: clamp(17px, 1.6vw, 24px);
+          font-size: clamp(17px, 1.55vw, 24px);
           color: #f2f2f2;
           margin: 18px 0 10px;
           line-height: 1.35;
-          max-width: 1100px;
-          border-bottom: 1px solid var(--line); /* added line */
-          padding-bottom: 10px;
+          max-width: 760px;
         }
 
         .desc {
           font-size: clamp(12px, 1vw, 15px);
           color: #b8b8b8;
-          max-width: 1100px;
+          max-width: 720px;
           line-height: 1.65;
-          border-bottom: 1px solid var(--line); /* added line */
-          padding-bottom: 10px;
         }
 
         .contact-box,
@@ -92,17 +88,14 @@ export default function AlfaxmsLuxuryWebsite() {
         }
 
         .contact-box {
-          min-height: 220px; /* bigger */
-          width: 100%;
-          max-width: 420px; /* wider */
-          padding: 28px 34px;
+          min-height: 150px;
+          max-width: 360px;
+          padding: 22px 28px;
           display: grid;
           align-content: center;
           justify-items: center;
           text-align: center;
-          gap: 12px;
-          justify-self: end;
-          transform: translateY(-8px);
+          gap: 10px;
         }
 
         .label {
@@ -136,20 +129,18 @@ export default function AlfaxmsLuxuryWebsite() {
         }
 
         .services-grid {
-          width: 100%;
+          width: min(980px, 82vw);
           display: grid;
           grid-template-columns: repeat(3, 1fr);
-          gap: 16px;
+          gap: 14px;
         }
 
         .service-card {
-          height: 90px;
+          height: 74px;
           display: flex;
           align-items: center;
           justify-content: center;
-          padding: 14px;
-          border-width: 1px;
-          box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+          padding: 12px;
         }
 
         .service-title {
