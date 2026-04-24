@@ -42,14 +42,14 @@ export default function AlfaxmsLuxuryWebsite() {
           height: 100%;
           display: grid;
           grid-template-rows: auto auto auto;
-          gap: 18px; /* reduced overall spacing */
+          gap: 10px; /* tighter overall */
         }
 
         .top {
           display: grid;
-          grid-template-columns: 1.2fr 0.8fr; /* give right more space */
-          gap: 16px; /* tighter */
-          align-items: start;
+          grid-template-columns: 1.4fr 0.6fr; /* push box closer */
+          gap: 8px; /* tighter gap */
+          align-items: center; /* vertically align to remove empty space */
         }
 
         .title {
@@ -122,8 +122,9 @@ export default function AlfaxmsLuxuryWebsite() {
           display: grid;
           align-content: start;
           justify-items: stretch;
-          gap: 12px; /* tighter vertical gap */
+          gap: 10px;
           width: 100%;
+          margin-top: -8px; /* pull up to remove gap */
         }
 
         .section-title {
