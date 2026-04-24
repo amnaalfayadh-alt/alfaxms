@@ -20,7 +20,7 @@ export default function AlfaxmsLuxuryWebsite() {
         }
 
         :root {
-          --accent: #FFD400;
+          --accent: #FFF200;
         }
 
         a {
