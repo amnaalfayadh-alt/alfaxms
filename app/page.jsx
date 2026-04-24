@@ -41,15 +41,15 @@ export default function AlfaxmsLuxuryWebsite() {
           width: 100%;
           height: 100%;
           display: grid;
-          grid-template-rows: auto auto auto; /* remove forced centering */
-          gap: 28px;
+          grid-template-rows: auto auto auto;
+          gap: 18px; /* reduced overall spacing */
         }
 
         .top {
           display: grid;
-          grid-template-columns: 1fr 0.6fr;
-          gap: 24px; /* reduced gap */
-          align-items: start; /* pull contact box up */
+          grid-template-columns: 1.2fr 0.8fr; /* give right more space */
+          gap: 16px; /* tighter */
+          align-items: start;
         }
 
         .title {
@@ -80,21 +80,21 @@ export default function AlfaxmsLuxuryWebsite() {
         }
 
         .contact-box {
-          margin-top: 6px;
-          min-height: 170px;
+          margin-top: 0;
+          min-height: 220px; /* bigger box */
           width: 100%;
-          max-width: 380px;
-          padding: 28px 32px;
+          max-width: 460px; /* wider */
+          padding: 32px 36px;
           display: grid;
           align-content: center;
           justify-items: center;
           text-align: center;
-          gap: 12px;
+          gap: 14px;
           justify-self: end;
-          border: 1px solid rgba(255,242,0,0.6);
-          border-radius: 20px;
+          border: 1px solid rgba(255,242,0,0.7);
+          border-radius: 22px;
           background: linear-gradient(145deg, rgba(20,20,20,0.95), rgba(10,10,10,0.95));
-          box-shadow: 0 0 25px rgba(255,242,0,0.15);
+          box-shadow: 0 0 30px rgba(255,242,0,0.2);
           transition: all 0.3s ease;
         }
 
@@ -120,9 +120,9 @@ export default function AlfaxmsLuxuryWebsite() {
 
         .services-section {
           display: grid;
-          align-content: start; /* no vertical centering */
+          align-content: start;
           justify-items: stretch;
-          gap: 18px;
+          gap: 12px; /* tighter vertical gap */
           width: 100%;
         }
 
@@ -165,9 +165,10 @@ export default function AlfaxmsLuxuryWebsite() {
 
         .about-full {
           display: flex;
-          align-items: flex-start; /* move up */
+          align-items: flex-start;
           justify-content: space-between;
           width: 100%;
+          margin-top: -10px; /* pull up to remove big gap */
         }
 
         .about-wrap {
