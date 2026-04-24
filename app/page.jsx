@@ -81,93 +81,81 @@ export default function AlfaxmsLuxuryWebsite() {
 
         .contact-box {
           position: relative;
-          isolation: isolate;
           overflow: hidden;
-          margin-top: 0;
-          min-height: 300px;
-          width: 100%;
-          max-width: 560px;
-          padding: 44px 48px;
+          min-height: 320px;
+          max-width: 580px;
+          padding: 48px 52px;
           display: grid;
           align-content: center;
           justify-items: center;
-          text-align: center;
-          gap: 18px;
-          justify-self: end;
-          border-radius: 26px;
-          background: linear-gradient(145deg, rgba(22,22,22,0.95), rgba(8,8,8,0.98));
+          gap: 20px;
+          border-radius: 28px;
+          background: linear-gradient(145deg, #111, #050505);
           border: 2px solid var(--accent);
           box-shadow:
-            0 0 28px rgba(255,242,0,0.42),
-            0 0 95px rgba(255,242,0,0.22),
-            inset 0 0 30px rgba(255,242,0,0.14);
-          animation: contactPulse 3.2s ease-in-out infinite;
-        }
-
-        .contact-box::before {
-          content: '';
-          position: absolute;
-          inset: -2px;
-          z-index: -1;
-          border-radius: 28px;
-          background: linear-gradient(120deg, transparent 0%, rgba(255,242,0,0.15) 30%, rgba(255,242,0,0.8) 50%, rgba(255,242,0,0.15) 70%, transparent 100%);
-          background-size: 220% 220%;
-          animation: borderShine 3.8s linear infinite;
+            0 0 40px rgba(255,242,0,0.6),
+            0 0 120px rgba(255,242,0,0.35),
+            inset 0 0 40px rgba(255,242,0,0.2);
+          animation: glowPulse 2.8s ease-in-out infinite;
         }
 
         .contact-box::after {
           content: '';
           position: absolute;
-          top: -40%;
-          left: -80%;
-          width: 60%;
-          height: 180%;
-          background: linear-gradient(90deg, transparent, rgba(255,255,255,0.16), transparent);
-          transform: rotate(22deg);
-          animation: shineSweep 4.5s ease-in-out infinite;
-          pointer-events: none;
+          top: -50%;
+          left: -100%;
+          width: 70%;
+          height: 200%;
+          background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+          transform: rotate(25deg);
+          animation: shineMove 3.5s linear infinite;
         }
 
         .contact-box:hover {
-          transform: translateY(-4px);
+          transform: scale(1.02);
           box-shadow:
-            0 0 40px rgba(255,242,0,0.55),
-            0 0 120px rgba(255,242,0,0.3),
-            inset 0 0 38px rgba(255,242,0,0.18);
+            0 0 60px rgba(255,242,0,0.9),
+            0 0 160px rgba(255,242,0,0.5),
+            inset 0 0 60px rgba(255,242,0,0.25);
         }
 
-        @keyframes contactPulse {
+        @keyframes glowPulse {
           0%, 100% {
             box-shadow:
-              0 0 24px rgba(255,242,0,0.36),
-              0 0 80px rgba(255,242,0,0.18),
-              inset 0 0 24px rgba(255,242,0,0.1);
+              0 0 30px rgba(255,242,0,0.5),
+              0 0 90px rgba(255,242,0,0.25),
+              inset 0 0 30px rgba(255,242,0,0.15);
           }
           50% {
             box-shadow:
-              0 0 40px rgba(255,242,0,0.58),
-              0 0 130px rgba(255,242,0,0.32),
-              inset 0 0 38px rgba(255,242,0,0.18);
+              0 0 70px rgba(255,242,0,1),
+              0 0 200px rgba(255,242,0,0.6),
+              inset 0 0 70px rgba(255,242,0,0.3);
           }
         }
 
-        @keyframes borderShine {
-          0% { background-position: 0% 50%; }
-          100% { background-position: 220% 50%; }
-        }
-
-        @keyframes shineSweep {
-          0%, 35% { left: -80%; opacity: 0; }
-          50% { opacity: 1; }
-          75%, 100% { left: 130%; opacity: 0; }
+        @keyframes shineMove {
+          0% { left: -100%; opacity: 0; }
+          30% { opacity: 1; }
+          60% { opacity: 1; }
+          100% { left: 120%; opacity: 0; }
         }
 
         .label {
-          color: var(--accent);
-          font-size: 13px; /* slightly bigger */
-          letter-spacing: 0.26em;
+          color: #FFF200;
+          font-size: 16px;
+          letter-spacing: 0.28em;
           text-transform: uppercase;
-          font-weight: 700;
+          font-weight: 800;
+          position: relative;
+          z-index: 2;
+        }
+
+        
+          50% {
+            width: 85%;
+            opacity: 1;
+          }
         }
 
         .contact-text {
