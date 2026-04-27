@@ -35,9 +35,9 @@ export default function AlfaxmsLuxuryWebsite() {
           padding: 28px 42px;
           overflow-x: hidden;
           background:
-            radial-gradient(circle at 78% 18%, rgba(255,242,0,0.08), transparent 22%),
-            radial-gradient(circle at 48% 48%, rgba(255,255,255,0.08), transparent 24%),
-            linear-gradient(120deg, #000 0%, #050505 38%, #171717 72%, #000 100%);
+            radial-gradient(circle at 78% 18%, rgba(255,242,0,0.07), transparent 22%),
+            radial-gradient(circle at 48% 48%, rgba(255,255,255,0.05), transparent 24%),
+            linear-gradient(120deg, #0d0d0d 0%, #111111 38%, #1c1c1c 72%, #0f0f0f 100%);
         }
 
         .container {
@@ -110,7 +110,7 @@ export default function AlfaxmsLuxuryWebsite() {
         }
 
         .label {
-          color: var(--accent);
+          color: #E8D000;
           font-size: clamp(15px, 1.2vw, 20px);
           letter-spacing: 0.28em;
           text-transform: uppercase;
@@ -177,7 +177,7 @@ export default function AlfaxmsLuxuryWebsite() {
           gap: 8px;
           border: 1px solid var(--line);
           border-radius: 18px;
-          background: linear-gradient(145deg, rgba(22,22,22,0.92), rgba(5,5,5,0.86));
+          background: linear-gradient(145deg, rgba(32,32,32,0.95), rgba(18,18,18,0.92));
           box-shadow: 0 16px 34px rgba(0,0,0,0.34), inset 0 1px 0 rgba(255,255,255,0.08);
           transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
         }
@@ -189,7 +189,7 @@ export default function AlfaxmsLuxuryWebsite() {
         }
 
         .service-title {
-          color: var(--accent);
+          color: #e8e8e8;
           font-size: clamp(12px, 0.9vw, 14px);
           letter-spacing: 0.2em;
           text-transform: uppercase;
@@ -273,7 +273,7 @@ export default function AlfaxmsLuxuryWebsite() {
           gap: 22px;
           border: 1px solid var(--line);
           border-radius: 18px;
-          background: linear-gradient(145deg, rgba(22,22,22,0.92), rgba(5,5,5,0.86));
+          background: linear-gradient(145deg, rgba(32,32,32,0.95), rgba(18,18,18,0.92));
           box-shadow: 0 14px 34px rgba(0,0,0,0.32), inset 0 1px 0 rgba(255,255,255,0.07);
         }
 
