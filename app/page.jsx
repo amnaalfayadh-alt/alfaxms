@@ -20,7 +20,9 @@ export default function AlfaxmsLuxuryWebsite() {
 
         :root {
           --accent: #FFF200;
-          --line: #9a9a9a;
+          --line: rgba(220, 220, 220, 0.55);
+          --soft-line: rgba(255, 255, 255, 0.14);
+          --card: rgba(12, 12, 12, 0.82);
         }
 
         a {
@@ -32,73 +34,83 @@ export default function AlfaxmsLuxuryWebsite() {
           width: 100vw;
           height: 100vh;
           overflow: hidden;
-          padding: 24px 36px;
-          background: linear-gradient(120deg, #000 0%, #060606 38%, #191919 70%, #000 100%);
+          padding: 28px 42px;
+          background:
+            radial-gradient(circle at 78% 18%, rgba(255,242,0,0.08), transparent 22%),
+            radial-gradient(circle at 48% 48%, rgba(255,255,255,0.08), transparent 24%),
+            linear-gradient(120deg, #000 0%, #050505 38%, #171717 72%, #000 100%);
         }
 
         .container {
           width: 100%;
           height: 100%;
           display: grid;
-          grid-template-rows: auto auto auto;
-          gap: 10px;
+          grid-template-rows: 32% 26% 42%;
+          gap: 14px;
         }
 
         .top {
           display: grid;
-          grid-template-columns: 1.4fr 0.6fr;
-          gap: 8px;
+          grid-template-columns: 1.15fr 0.85fr;
+          gap: 28px;
           align-items: center;
         }
 
         .title {
-          font-size: clamp(52px, 5.6vw, 86px);
-          font-weight: 800;
-          letter-spacing: 0.05em;
-          line-height: 0.95;
+          font-size: clamp(56px, 5.8vw, 92px);
+          font-weight: 900;
+          letter-spacing: 0.045em;
+          line-height: 0.92;
+          text-shadow: 0 18px 40px rgba(0,0,0,0.45);
         }
 
         .accent { color: var(--accent); }
 
         .subtitle {
-          font-size: clamp(20px, 1.9vw, 28px);
-          color: #f2f2f2;
-          margin: 10px 0 6px;
-          line-height: 1.4;
-          max-width: 820px;
+          font-size: clamp(20px, 1.85vw, 29px);
+          color: #f4f4f4;
+          margin: 14px 0 10px;
+          line-height: 1.35;
+          max-width: 880px;
         }
 
         .desc {
-          font-size: clamp(14px, 1.2vw, 18px);
-          color: #b8b8b8;
-          max-width: 780px;
-          line-height: 1.6;
-          margin-bottom: 0;
+          font-size: clamp(14px, 1.1vw, 17px);
+          color: #c7c7c7;
+          max-width: 880px;
+          line-height: 1.65;
+          padding-top: 10px;
+          border-top: 1px solid var(--soft-line);
         }
 
         .contact-box {
           position: relative;
           overflow: hidden;
-          min-height: 340px;
-          max-width: 620px;
-          padding: 52px 56px;
+          min-height: 280px;
+          width: 520px; /* controlled width */
+          padding: 38px 46px;
           display: grid;
           align-content: center;
           justify-items: center;
-          gap: 22px;
-          border-radius: 32px;
-          background: radial-gradient(circle at 30% 20%, rgba(255,242,0,0.15), transparent 40%),
-                      linear-gradient(145deg, #0a0a0a, #000);
-          border: 2px solid #FFF200;
+          gap: 14px;
+          justify-self: end;
+          margin-top: 10px; /* push down slightly to avoid overlap */
+          border-radius: 26px;
+          background:
+            linear-gradient(135deg, rgba(255,255,255,0.06), transparent 34%),
+            radial-gradient(circle at 20% 15%, rgba(255,242,0,0.06), transparent 34%),
+            rgba(7,7,7,0.92);
+          border: 1px solid rgba(255,242,0,0.7);
           box-shadow:
-            0 0 40px rgba(255,242,0,0.6),
-            0 0 120px rgba(255,242,0,0.25);
+            0 18px 50px rgba(0,0,0,0.6),
+            0 0 28px rgba(255,242,0,0.12),
+            inset 0 1px 0 rgba(255,255,255,0.1);
         }
 
         .label {
           color: #FFF200 !important;
-          font-size: 22px; /* cleaner size like reference */
-          letter-spacing: 0.28em; /* tighter like your image */
+          font-size: 20px;
+          letter-spacing: 0.3em;
           text-transform: uppercase;
           font-weight: 900;
           text-align: center;
@@ -129,9 +141,9 @@ export default function AlfaxmsLuxuryWebsite() {
         }
 
         .contact-text {
-          color: #f5f5f5;
-          font-size: 22px;
-          line-height: 1.8;
+          color: #f8f8f8;
+          font-size: 20px;
+          line-height: 1.75;
           text-align: center;
         }
 
@@ -148,20 +160,35 @@ export default function AlfaxmsLuxuryWebsite() {
 
         .services-section {
           display: grid;
-          align-content: start;
+          align-content: center;
           justify-items: stretch;
-          gap: 10px;
+          gap: 14px;
           width: 100%;
-          margin-top: -8px;
         }
 
         .section-title {
           margin: 0;
-          font-size: clamp(18px, 1.8vw, 26px);
-          letter-spacing: 0.2em;
+          font-size: clamp(17px, 1.55vw, 23px);
+          letter-spacing: 0.24em;
           text-transform: uppercase;
-          font-weight: 800;
+          font-weight: 900;
           text-align: center;
+          position: relative;
+        }
+
+        .section-title::before,
+        .section-title::after {
+          content: '';
+          display: inline-block;
+          width: 110px;
+          height: 1px;
+          background: linear-gradient(90deg, transparent, var(--line));
+          vertical-align: middle;
+          margin: 0 22px;
+        }
+
+        .section-title::after {
+          background: linear-gradient(90deg, var(--line), transparent);
         }
 
         .services-grid {
@@ -172,92 +199,104 @@ export default function AlfaxmsLuxuryWebsite() {
         }
 
         .service-card {
-          height: 74px;
+          height: 80px;
           display: flex;
           align-items: center;
           justify-content: center;
           padding: 12px;
           border: 1px solid var(--line);
-          border-radius: 16px;
-          background: rgba(18,18,18,0.9);
+          border-radius: 18px;
+          background: linear-gradient(145deg, rgba(22,22,22,0.92), rgba(5,5,5,0.86));
+          box-shadow: 0 16px 34px rgba(0,0,0,0.34), inset 0 1px 0 rgba(255,255,255,0.08);
+          transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .service-card:hover {
+          transform: translateY(-3px);
+          border-color: rgba(255,242,0,0.8);
+          box-shadow: 0 20px 45px rgba(0,0,0,0.42), 0 0 24px rgba(255,242,0,0.08);
         }
 
         .service-title {
           color: var(--accent);
-          font-size: 14px;
-          letter-spacing: 0.2em;
+          font-size: 13px;
+          letter-spacing: 0.22em;
           text-transform: uppercase;
-          font-weight: 800;
+          font-weight: 900;
           text-align: center;
           line-height: 1.4;
         }
 
         .about-full {
           display: flex;
-          align-items: flex-start;
+          align-items: center;
           justify-content: space-between;
           width: 100%;
-          margin-top: -10px;
         }
 
         .about-wrap {
           width: 100%;
           display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 18px;
-          align-items: start;
+          grid-template-columns: 1.08fr 0.92fr;
+          gap: 44px;
+          align-items: center;
         }
 
         .about-left {
           border-left: 2px solid var(--line);
-          padding-left: 26px;
+          padding-left: 30px;
+          max-width: 940px;
         }
 
         .about-left h2 {
-          margin: 0 0 10px;
-          font-size: clamp(26px, 2.4vw, 36px);
+          margin: 0 0 12px;
+          font-size: clamp(28px, 2.4vw, 38px);
           line-height: 1.05;
+          letter-spacing: 0.02em;
         }
 
         .about-left p {
-          margin: 0 0 8px;
-          font-size: 16px;
-          color: #f0f0f0;
-          line-height: 1.6;
+          margin: 0 0 10px;
+          font-size: 15px;
+          color: #ededed;
+          line-height: 1.55;
         }
 
         .about-card-stack {
           display: grid;
-          gap: 10px;
-          max-width: 520px;
+          gap: 14px;
+          max-width: 610px;
           justify-self: end;
           width: 100%;
         }
 
         .about-card {
-          min-height: 70px;
-          padding: 16px 20px;
+          min-height: 86px;
+          padding: 18px 24px;
           display: grid;
-          grid-template-columns: 0.8fr 1.2fr;
+          grid-template-columns: 0.75fr 1.25fr;
           align-items: center;
-          gap: 18px;
+          gap: 22px;
           border: 1px solid var(--line);
-          border-radius: 16px;
-          background: rgba(18,18,18,0.9);
+          border-radius: 18px;
+          background: linear-gradient(145deg, rgba(22,22,22,0.92), rgba(5,5,5,0.86));
+          box-shadow: 0 14px 34px rgba(0,0,0,0.32), inset 0 1px 0 rgba(255,255,255,0.07);
         }
 
         .about-card h3 {
           margin: 0;
-          font-size: 20px;
-          line-height: 1.2;
-          font-weight: 800;
+          font-size: 19px;
+          line-height: 1.15;
+          font-weight: 900;
         }
 
         .about-card p {
           margin: 0;
-          color: #cfcfcf;
-          font-size: 16px;
-          line-height: 1.7;
+          color: #d8d8d8;
+          font-size: 15px;
+          line-height: 1.55;
+          border-left: 1px solid rgba(255,242,0,0.5);
+          padding-left: 22px;
         }
 
         @media (max-width: 900px) {
