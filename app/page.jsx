@@ -2,7 +2,7 @@ export default function AlfaxmsLuxuryWebsite() {
   return (
     <div className="site-root">
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Great+Vibes&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
         * {
           box-sizing: border-box;
@@ -170,9 +170,11 @@ export default function AlfaxmsLuxuryWebsite() {
         .service-card {
           min-height: 82px;
           display: flex;
+          flex-direction: column;
           align-items: center;
           justify-content: center;
-          padding: 14px;
+          padding: 18px 14px 14px;
+          gap: 8px;
           border: 1px solid var(--line);
           border-radius: 18px;
           background: linear-gradient(145deg, rgba(22,22,22,0.92), rgba(5,5,5,0.86));
@@ -194,6 +196,17 @@ export default function AlfaxmsLuxuryWebsite() {
           font-weight: 900;
           text-align: center;
           line-height: 1.4;
+        }
+
+        .service-icon {
+          width: 38px;
+          height: 38px;
+          margin-bottom: 4px;
+          opacity: 0.9;
+        }
+
+        .service-card:hover .service-icon {
+          opacity: 1;
         }
 
         .about-wrap {
@@ -234,7 +247,6 @@ export default function AlfaxmsLuxuryWebsite() {
         }
 
         .signature-name {
-          font-family: 'Montserrat', sans-serif;
           font-size: inherit;
           letter-spacing: inherit;
           text-transform: inherit;
@@ -242,7 +254,6 @@ export default function AlfaxmsLuxuryWebsite() {
           margin-left: 6px;
           color: #ffffff;
           display: inline;
-          transform: none;
         }
 
         .about-card-stack {
@@ -435,12 +446,73 @@ export default function AlfaxmsLuxuryWebsite() {
         <div className="services-section">
           <h2 className="section-title">Automotive Performance Garage</h2>
           <div className="services-grid">
-            <div className="service-card"><div className="service-title">Maintenance & Inspection</div></div>
-            <div className="service-card"><div className="service-title">Diagnostics & Electrical</div></div>
-            <div className="service-card"><div className="service-title">Repair Services</div></div>
-            <div className="service-card"><div className="service-title">Performance Upgrades</div></div>
-            <div className="service-card"><div className="service-title">Off Road</div></div>
-            <div className="service-card"><div className="service-title">Consultation</div></div>
+            <div className="service-card">
+              {/* Maintenance & Inspection — wrench + shield */}
+              <svg className="service-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 8C10.7 8 8 10.7 8 14c0 2.1 1.05 3.95 2.65 5.1L7 32l3 1 4.5-10.5A6 6 0 0014 8zm0 9a3 3 0 110-6 3 3 0 010 6z" fill="#FFF200"/>
+                <rect x="22" y="7" width="9" height="12" rx="2" stroke="#FFF200" strokeWidth="1.8" fill="none"/>
+                <path d="M26.5 11v4M24.5 13h4" stroke="#FFF200" strokeWidth="1.8" strokeLinecap="round"/>
+                <path d="M22 22l9 9" stroke="#FFF200" strokeWidth="1.8" strokeLinecap="round"/>
+              </svg>
+              <div className="service-title">Maintenance & Inspection</div>
+            </div>
+            <div className="service-card">
+              {/* Diagnostics & Electrical — circuit/bolt */}
+              <svg className="service-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="19" cy="19" r="10" stroke="#FFF200" strokeWidth="1.8" fill="none"/>
+                <path d="M21 9.5l-4 8h4l-4 11" stroke="#FFF200" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <circle cx="8" cy="19" r="1.5" fill="#FFF200"/>
+                <circle cx="30" cy="19" r="1.5" fill="#FFF200"/>
+                <path d="M8 19h1M29 19h1" stroke="#FFF200" strokeWidth="1.5" strokeLinecap="round"/>
+              </svg>
+              <div className="service-title">Diagnostics & Electrical</div>
+            </div>
+            <div className="service-card">
+              {/* Repair Services — engine block */}
+              <svg className="service-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="9" y="13" width="20" height="13" rx="2" stroke="#FFF200" strokeWidth="1.8" fill="none"/>
+                <rect x="13" y="16" width="4" height="7" rx="1" stroke="#FFF200" strokeWidth="1.5" fill="none"/>
+                <rect x="21" y="16" width="4" height="7" rx="1" stroke="#FFF200" strokeWidth="1.5" fill="none"/>
+                <path d="M13 10v3M19 10v3M25 10v3" stroke="#FFF200" strokeWidth="1.8" strokeLinecap="round"/>
+                <path d="M5 17h4M29 17h4M5 22h4M29 22h4" stroke="#FFF200" strokeWidth="1.8" strokeLinecap="round"/>
+              </svg>
+              <div className="service-title">Repair Services</div>
+            </div>
+            <div className="service-card">
+              {/* Performance Upgrades — gauge/speedo */}
+              <svg className="service-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 24a11 11 0 1122 0" stroke="#FFF200" strokeWidth="1.8" strokeLinecap="round" fill="none"/>
+                <path d="M19 24l-5-7" stroke="#FFF200" strokeWidth="2" strokeLinecap="round"/>
+                <circle cx="19" cy="24" r="2" fill="#FFF200"/>
+                <path d="M10 27l1.5-1.5M28 27l-1.5-1.5M19 12v2" stroke="#FFF200" strokeWidth="1.5" strokeLinecap="round"/>
+                <path d="M24 14l-1 1.7" stroke="#FFF200" strokeWidth="1.5" strokeLinecap="round"/>
+              </svg>
+              <div className="service-title">Performance Upgrades</div>
+            </div>
+            <div className="service-card">
+              {/* Off Road — truck with terrain */}
+              <svg className="service-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="5" y="14" width="22" height="12" rx="2" stroke="#FFF200" strokeWidth="1.8" fill="none"/>
+                <path d="M27 18h3l3 4v4h-6" stroke="#FFF200" strokeWidth="1.8" strokeLinejoin="round" fill="none"/>
+                <circle cx="11" cy="28" r="3" stroke="#FFF200" strokeWidth="1.8" fill="none"/>
+                <circle cx="27" cy="28" r="3" stroke="#FFF200" strokeWidth="1.8" fill="none"/>
+                <path d="M14 28h10" stroke="#FFF200" strokeWidth="1.8"/>
+                <path d="M5 22h22" stroke="#FFF200" strokeWidth="1.2" strokeDasharray="2 2"/>
+                <path d="M9 14v-3M15 14v-5M21 14v-3" stroke="#FFF200" strokeWidth="1.5" strokeLinecap="round"/>
+              </svg>
+              <div className="service-title">Off Road</div>
+            </div>
+            <div className="service-card">
+              {/* Consultation — clipboard/checklist */}
+              <svg className="service-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="10" y="8" width="18" height="23" rx="2" stroke="#FFF200" strokeWidth="1.8" fill="none"/>
+                <path d="M15 8v-1a1 1 0 011-1h6a1 1 0 011 1v1" stroke="#FFF200" strokeWidth="1.5" fill="none"/>
+                <path d="M14 17l2 2 4-4" stroke="#FFF200" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M14 23l2 2 4-4" stroke="#FFF200" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M22 18h2M22 24h2" stroke="#FFF200" strokeWidth="1.5" strokeLinecap="round"/>
+              </svg>
+              <div className="service-title">Consultation</div>
+            </div>
           </div>
         </div>
 
@@ -458,16 +530,16 @@ export default function AlfaxmsLuxuryWebsite() {
 
           <div className="about-card-stack">
             <div className="about-card">
-              <h3>Premium Positioning</h3>
-              <p>Built around exclusivity and trust.</p>
+              <h3>Founded 2020</h3>
+              <p>Built from a hands-on passion for performance — not a franchise model.</p>
             </div>
             <div className="about-card">
-              <h3>Private Client Experience</h3>
-              <p>High touch personalized service.</p>
+              <h3>One Client at a Time</h3>
+              <p>No volume quotas. Every vehicle gets the founder's direct attention.</p>
             </div>
             <div className="about-card">
-              <h3>Refined Execution</h3>
-              <p>Precision driven results.</p>
+              <h3>Wylie, Texas</h3>
+              <p>Private studio location — shared by appointment with verified clients only.</p>
             </div>
           </div>
         </div>
