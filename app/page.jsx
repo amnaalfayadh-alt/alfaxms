@@ -2,7 +2,7 @@ export default function AlfaxmsLuxuryWebsite() {
   return (
     <div className="site-root">
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Great+Vibes&display=swap');
 
         * {
           box-sizing: border-box;
@@ -225,11 +225,24 @@ export default function AlfaxmsLuxuryWebsite() {
         }
 
         .founder-line {
+          margin-top: 18px;
+          font-size: clamp(14px, 1vw, 16px);
           letter-spacing: 0.2em;
+          color: #FFF200;
           text-transform: uppercase;
-          margin-top: 10px;
-          color: var(--accent);
-          font-weight: 600;
+          font-weight: 700;
+        }
+
+        .signature-name {
+          font-family: 'Montserrat', sans-serif;
+          font-size: inherit;
+          letter-spacing: inherit;
+          text-transform: inherit;
+          font-weight: 700;
+          margin-left: 6px;
+          color: #ffffff;
+          display: inline;
+          transform: none;
         }
 
         .about-card-stack {
@@ -438,7 +451,9 @@ export default function AlfaxmsLuxuryWebsite() {
             <p>
               Founded in 2020 by Abobakir Alfayadh, ALFAXMS was built on a vision of redefining the automotive experience through precision, discretion, and uncompromising quality. What began as a passion for performance and craftsmanship evolved into a private studio serving a select clientele who value attention to detail, trust, and a truly elevated standard of service. Every vehicle is treated with a tailored approach, ensuring results that reflect both technical excellence and a luxury experience from start to finish.
             </p>
-            <p className="founder-line">Founder — Abobakir Alfayadh</p>
+            <p className="founder-line">
+              Founder — <span className="signature-name">Abobakir Alfayadh</span>
+            </p>
           </div>
 
           <div className="about-card-stack">
