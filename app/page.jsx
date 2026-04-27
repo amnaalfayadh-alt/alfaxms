@@ -334,7 +334,17 @@ export default function AlfaxmsLuxuryWebsite() {
             <div className="about-left">
               <h2>About ALFAXMS</h2>
               <p>Private luxury automotive studio delivering high end services for select clientele.</p>
-              
+              <p>
+                Founded in 2020 by Abobakir Alfayadh, ALFAXMS was built on a vision of redefining the automotive experience through precision, discretion, and uncompromising quality.
+                What began as a passion for performance and craftsmanship evolved into a private
+                studio serving a select clientele who value attention to detail, trust, and a
+                truly elevated standard of service. Every vehicle is treated with a tailored
+                approach, ensuring results that reflect both technical excellence and a luxury
+                experience from start to finish.
+              </p>
+              <p style={{letterSpacing:'0.2em', textTransform:'uppercase', marginTop:'10px'}}>
+                <span style={{color:'#FFF200'}}>Founder — Abobakir Alfayadh</span>
+              </p>
             </div>
 
             <div className="about-card-stack">
