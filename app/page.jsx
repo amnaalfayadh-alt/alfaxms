@@ -1,12 +1,11 @@
 export default function AlfaxmsLuxuryWebsite() {
+
   return (
     <div className="site-root">
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
-        * {
-          box-sizing: border-box;
-        }
+        * { box-sizing: border-box; }
 
         html,
         body {
@@ -21,7 +20,7 @@ export default function AlfaxmsLuxuryWebsite() {
 
         :root {
           --accent: #FFF200;
-          --line: #9a9a9a; /* light gray lines */
+          --line: #9a9a9a;
         }
 
         a {
@@ -42,14 +41,14 @@ export default function AlfaxmsLuxuryWebsite() {
           height: 100%;
           display: grid;
           grid-template-rows: auto auto auto;
-          gap: 10px; /* tighter overall */
+          gap: 10px;
         }
 
         .top {
           display: grid;
-          grid-template-columns: 1.4fr 0.6fr; /* push box closer */
-          gap: 8px; /* tighter gap */
-          align-items: center; /* vertically align to remove empty space */
+          grid-template-columns: 1.4fr 0.6fr;
+          gap: 8px;
+          align-items: center;
         }
 
         .title {
@@ -59,9 +58,7 @@ export default function AlfaxmsLuxuryWebsite() {
           line-height: 0.95;
         }
 
-        .accent {
-          color: var(--accent);
-        }
+        .accent { color: var(--accent); }
 
         .subtitle {
           font-size: clamp(20px, 1.9vw, 28px);
@@ -98,49 +95,55 @@ export default function AlfaxmsLuxuryWebsite() {
             0 0 120px rgba(255,242,0,0.25);
         }
 
-        
-
-        .contact-box:hover {
-          transform: none;
-          box-shadow: none;
-        }
-
-        
-          50% {
-            box-shadow:
-              0 0 70px rgba(255,242,0,1),
-              0 0 200px rgba(255,242,0,0.6),
-              inset 0 0 70px rgba(255,242,0,0.3);
-          }
-        }
-
-        
-          30% { opacity: 1; }
-          60% { opacity: 1; }
-          100% { left: 120%; opacity: 0; }
-        }
-
         .label {
           color: #FFF200 !important;
-          font-size: 26px;
-          letter-spacing: 0.36em;
+          font-size: 22px; /* cleaner size like reference */
+          letter-spacing: 0.28em; /* tighter like your image */
           text-transform: uppercase;
           font-weight: 900;
-          position: relative;
-          z-index: 2;
+          text-align: center;
         }
 
         
-          50% {
-            width: 85%;
-            opacity: 1;
-          }
+
+        .stacked span {
+          display: block;
+          white-space: normal; /* allow proper fitting */
+        }
+
+        .stacked span:nth-child(1) {
+          font-size: 15px;
+          letter-spacing: 0.26em;
+          margin-bottom: 6px;
+        }
+
+        .stacked span:nth-child(2) {
+          font-size: 30px;
+          letter-spacing: 0.22em; /* reduced so it fits perfectly */
+          margin-bottom: 6px;
+        }
+
+        .stacked span:nth-child(3) {
+          font-size: 20px;
+          letter-spacing: 0.28em;
         }
 
         .contact-text {
           color: #f5f5f5;
           font-size: 22px;
           line-height: 1.8;
+          text-align: center;
+        }
+
+        .email-link {
+          cursor: pointer;
+          border-bottom: 1px solid rgba(255,255,255,0.55);
+          transition: color 0.2s ease, border-color 0.2s ease;
+        }
+
+        .email-link:hover {
+          color: var(--accent);
+          border-color: var(--accent);
         }
 
         .services-section {
@@ -149,7 +152,7 @@ export default function AlfaxmsLuxuryWebsite() {
           justify-items: stretch;
           gap: 10px;
           width: 100%;
-          margin-top: -8px; /* pull up to remove gap */
+          margin-top: -8px;
         }
 
         .section-title {
@@ -162,7 +165,7 @@ export default function AlfaxmsLuxuryWebsite() {
         }
 
         .services-grid {
-          width: 100%; /* full width */
+          width: 100%;
           display: grid;
           grid-template-columns: repeat(3, 1fr);
           gap: 18px;
@@ -194,14 +197,14 @@ export default function AlfaxmsLuxuryWebsite() {
           align-items: flex-start;
           justify-content: space-between;
           width: 100%;
-          margin-top: -10px; /* pull up to remove big gap */
+          margin-top: -10px;
         }
 
         .about-wrap {
           width: 100%;
           display: grid;
           grid-template-columns: 1fr 1fr;
-          gap: 18px; /* reduced space between about and cards */
+          gap: 18px;
           align-items: start;
         }
 
@@ -225,7 +228,7 @@ export default function AlfaxmsLuxuryWebsite() {
 
         .about-card-stack {
           display: grid;
-          gap: 10px; /* tighter spacing between cards */
+          gap: 10px;
           max-width: 520px;
           justify-self: end;
           width: 100%;
@@ -306,11 +309,11 @@ export default function AlfaxmsLuxuryWebsite() {
           </div>
 
           <div className="contact-box">
-            <div className="label">By Appointment Only</div>
+            <div className="label">BY APPOINTMENT ONLY</div>
             <div className="contact-text">Exclusive service for serious clientele.</div>
             <div className="label">Contact</div>
             <div className="contact-text">
-              <a href="mailto:info@alfaxms.com?subject=ALFAXMS Inquiry&body=Hello, I would like to inquire about your services." target="_blank" rel="noopener noreferrer">info@alfaxms.com</a>
+              <a href="mailto:info@alfaxms.com?subject=ALFAXMS Inquiry&body=Hello, I would like to inquire about your services.">info@alfaxms.com</a>
               <br />
               Wylie, Texas
             </div>
