@@ -438,7 +438,7 @@ export default function AlfaxmsLuxuryWebsite() {
             <div className="contact-text">
               <a href="mailto:info@alfaxms.com?subject=ALFAXMS Inquiry&body=Hello, I would like to inquire about your services.">info@alfaxms.com</a>
               <br />
-              Wylie, Texas
+              Private Studio
             </div>
           </div>
         </div>
@@ -531,15 +531,15 @@ export default function AlfaxmsLuxuryWebsite() {
           <div className="about-card-stack">
             <div className="about-card">
               <h3>Founded 2020</h3>
-              <p>Built from a hands-on passion for performance — not a franchise model.</p>
+              <p>Built from a hands-on passion for performance, not a franchise model.</p>
             </div>
             <div className="about-card">
               <h3>One Client at a Time</h3>
               <p>No volume quotas. Every vehicle gets the founder's direct attention.</p>
             </div>
             <div className="about-card">
-              <h3>Wylie, Texas</h3>
-              <p>Private studio location — shared by appointment with verified clients only.</p>
+              <h3>Private Studio</h3>
+              <p>Location shared by appointment with verified clients only.</p>
             </div>
           </div>
         </div>
