@@ -13,15 +13,15 @@ export default function AlfaxmsLuxuryWebsite() {
           margin: 0;
           width: 100%;
           min-height: 100%;
-          background: #000;
+          background: #0a0d1a;
           font-family: 'Montserrat', sans-serif;
           color: #fff;
         }
 
         :root {
-          --accent: #FFF200;
-          --line: rgba(220, 220, 220, 0.55);
-          --soft-line: rgba(255, 255, 255, 0.14);
+          --accent: #38BDF8;
+          --line: rgba(180, 200, 220, 0.4);
+          --soft-line: rgba(255, 255, 255, 0.12);
         }
 
         a {
@@ -35,9 +35,10 @@ export default function AlfaxmsLuxuryWebsite() {
           padding: 28px 42px;
           overflow-x: hidden;
           background:
-            radial-gradient(circle at 78% 18%, rgba(255,242,0,0.07), transparent 22%),
-            radial-gradient(circle at 48% 48%, rgba(255,255,255,0.05), transparent 24%),
-            linear-gradient(120deg, #0d0d0d 0%, #111111 38%, #1c1c1c 72%, #0f0f0f 100%);
+            radial-gradient(ellipse at 15% 85%, rgba(120,30,40,0.35), transparent 45%),
+            radial-gradient(ellipse at 85% 15%, rgba(40,50,80,0.4), transparent 45%),
+            radial-gradient(ellipse at 55% 45%, rgba(50,70,110,0.3), transparent 55%),
+            linear-gradient(150deg, #0e0d14 0%, #111520 35%, #141a2e 65%, #100d18 100%);
         }
 
         .container {
@@ -99,18 +100,18 @@ export default function AlfaxmsLuxuryWebsite() {
           border-radius: 28px;
           background:
             linear-gradient(135deg, rgba(255,255,255,0.06), transparent 34%),
-            radial-gradient(circle at 20% 15%, rgba(255,242,0,0.06), transparent 34%),
-            rgba(7,7,7,0.92);
-          border: 1px solid rgba(255,242,0,0.72);
+            radial-gradient(circle at 20% 15%, rgba(56,189,248,0.07), transparent 34%),
+            rgba(12,20,42,0.95);
+          border: 1px solid rgba(56,189,248,0.72);
           box-shadow:
-            0 18px 50px rgba(0,0,0,0.6),
-            0 0 30px rgba(255,242,0,0.14),
+            0 18px 50px rgba(0,0,0,0.5),
+            0 0 30px rgba(56,189,248,0.12),
             inset 0 1px 0 rgba(255,255,255,0.1);
           text-align: center;
         }
 
         .label {
-          color: #E8D000;
+          color: #38BDF8;
           font-size: clamp(15px, 1.2vw, 20px);
           letter-spacing: 0.28em;
           text-transform: uppercase;
@@ -123,6 +124,13 @@ export default function AlfaxmsLuxuryWebsite() {
           font-size: clamp(15px, 1.15vw, 20px);
           line-height: 1.65;
           text-align: center;
+        }
+
+        .contact-text a {
+          text-decoration: underline;
+          text-underline-offset: 4px;
+          font-size: clamp(17px, 1.35vw, 23px);
+          font-weight: 700;
         }
 
         .contact-text a:hover {
@@ -177,15 +185,15 @@ export default function AlfaxmsLuxuryWebsite() {
           gap: 8px;
           border: 1px solid var(--line);
           border-radius: 18px;
-          background: linear-gradient(145deg, rgba(32,32,32,0.95), rgba(18,18,18,0.92));
+          background: linear-gradient(145deg, rgba(20,32,58,0.97), rgba(12,20,40,0.95));
           box-shadow: 0 16px 34px rgba(0,0,0,0.34), inset 0 1px 0 rgba(255,255,255,0.08);
           transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
         }
 
         .service-card:hover {
           transform: translateY(-3px);
-          border-color: rgba(255,242,0,0.8);
-          box-shadow: 0 20px 45px rgba(0,0,0,0.42), 0 0 24px rgba(255,242,0,0.08);
+          border-color: rgba(56,189,248,0.8);
+          box-shadow: 0 20px 45px rgba(0,0,0,0.42), 0 0 24px rgba(56,189,248,0.12);
         }
 
         .service-title {
@@ -241,7 +249,7 @@ export default function AlfaxmsLuxuryWebsite() {
           margin-top: 18px;
           font-size: clamp(14px, 1vw, 16px);
           letter-spacing: 0.2em;
-          color: #FFF200;
+          color: #38BDF8;
           text-transform: uppercase;
           font-weight: 700;
         }
@@ -273,7 +281,7 @@ export default function AlfaxmsLuxuryWebsite() {
           gap: 22px;
           border: 1px solid var(--line);
           border-radius: 18px;
-          background: linear-gradient(145deg, rgba(32,32,32,0.95), rgba(18,18,18,0.92));
+          background: linear-gradient(145deg, rgba(20,32,58,0.97), rgba(12,20,40,0.95));
           box-shadow: 0 14px 34px rgba(0,0,0,0.32), inset 0 1px 0 rgba(255,255,255,0.07);
         }
 
@@ -289,7 +297,7 @@ export default function AlfaxmsLuxuryWebsite() {
           color: #d8d8d8;
           font-size: clamp(14px, 0.95vw, 15px);
           line-height: 1.55;
-          border-left: 1px solid rgba(255,242,0,0.5);
+          border-left: 1px solid rgba(56,189,248,0.5);
           padding-left: 22px;
         }
 
@@ -411,7 +419,7 @@ export default function AlfaxmsLuxuryWebsite() {
           }
 
           .about-card p {
-            border-left: 1px solid rgba(255,242,0,0.5);
+            border-left: 1px solid rgba(56,189,248,0.5);
             padding-left: 16px;
           }
         }
@@ -438,7 +446,7 @@ export default function AlfaxmsLuxuryWebsite() {
             <div className="contact-text">
               <a href="mailto:info@alfaxms.com?subject=ALFAXMS Inquiry&body=Hello, I would like to inquire about your services.">info@alfaxms.com</a>
               <br />
-              Private Studio
+              Wylie, Texas
             </div>
           </div>
         </div>
@@ -449,67 +457,67 @@ export default function AlfaxmsLuxuryWebsite() {
             <div className="service-card">
               {/* Maintenance & Inspection — wrench + shield */}
               <svg className="service-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14 8C10.7 8 8 10.7 8 14c0 2.1 1.05 3.95 2.65 5.1L7 32l3 1 4.5-10.5A6 6 0 0014 8zm0 9a3 3 0 110-6 3 3 0 010 6z" fill="#FFF200"/>
-                <rect x="22" y="7" width="9" height="12" rx="2" stroke="#FFF200" strokeWidth="1.8" fill="none"/>
-                <path d="M26.5 11v4M24.5 13h4" stroke="#FFF200" strokeWidth="1.8" strokeLinecap="round"/>
-                <path d="M22 22l9 9" stroke="#FFF200" strokeWidth="1.8" strokeLinecap="round"/>
+                <path d="M14 8C10.7 8 8 10.7 8 14c0 2.1 1.05 3.95 2.65 5.1L7 32l3 1 4.5-10.5A6 6 0 0014 8zm0 9a3 3 0 110-6 3 3 0 010 6z" fill="#38BDF8"/>
+                <rect x="22" y="7" width="9" height="12" rx="2" stroke="#38BDF8" strokeWidth="1.8" fill="none"/>
+                <path d="M26.5 11v4M24.5 13h4" stroke="#38BDF8" strokeWidth="1.8" strokeLinecap="round"/>
+                <path d="M22 22l9 9" stroke="#38BDF8" strokeWidth="1.8" strokeLinecap="round"/>
               </svg>
               <div className="service-title">Maintenance & Inspection</div>
             </div>
             <div className="service-card">
               {/* Diagnostics & Electrical — circuit/bolt */}
               <svg className="service-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="19" cy="19" r="10" stroke="#FFF200" strokeWidth="1.8" fill="none"/>
-                <path d="M21 9.5l-4 8h4l-4 11" stroke="#FFF200" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <circle cx="8" cy="19" r="1.5" fill="#FFF200"/>
-                <circle cx="30" cy="19" r="1.5" fill="#FFF200"/>
-                <path d="M8 19h1M29 19h1" stroke="#FFF200" strokeWidth="1.5" strokeLinecap="round"/>
+                <circle cx="19" cy="19" r="10" stroke="#38BDF8" strokeWidth="1.8" fill="none"/>
+                <path d="M21 9.5l-4 8h4l-4 11" stroke="#38BDF8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <circle cx="8" cy="19" r="1.5" fill="#38BDF8"/>
+                <circle cx="30" cy="19" r="1.5" fill="#38BDF8"/>
+                <path d="M8 19h1M29 19h1" stroke="#38BDF8" strokeWidth="1.5" strokeLinecap="round"/>
               </svg>
               <div className="service-title">Diagnostics & Electrical</div>
             </div>
             <div className="service-card">
               {/* Repair Services — engine block */}
               <svg className="service-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="9" y="13" width="20" height="13" rx="2" stroke="#FFF200" strokeWidth="1.8" fill="none"/>
-                <rect x="13" y="16" width="4" height="7" rx="1" stroke="#FFF200" strokeWidth="1.5" fill="none"/>
-                <rect x="21" y="16" width="4" height="7" rx="1" stroke="#FFF200" strokeWidth="1.5" fill="none"/>
-                <path d="M13 10v3M19 10v3M25 10v3" stroke="#FFF200" strokeWidth="1.8" strokeLinecap="round"/>
-                <path d="M5 17h4M29 17h4M5 22h4M29 22h4" stroke="#FFF200" strokeWidth="1.8" strokeLinecap="round"/>
+                <rect x="9" y="13" width="20" height="13" rx="2" stroke="#38BDF8" strokeWidth="1.8" fill="none"/>
+                <rect x="13" y="16" width="4" height="7" rx="1" stroke="#38BDF8" strokeWidth="1.5" fill="none"/>
+                <rect x="21" y="16" width="4" height="7" rx="1" stroke="#38BDF8" strokeWidth="1.5" fill="none"/>
+                <path d="M13 10v3M19 10v3M25 10v3" stroke="#38BDF8" strokeWidth="1.8" strokeLinecap="round"/>
+                <path d="M5 17h4M29 17h4M5 22h4M29 22h4" stroke="#38BDF8" strokeWidth="1.8" strokeLinecap="round"/>
               </svg>
               <div className="service-title">Repair Services</div>
             </div>
             <div className="service-card">
               {/* Performance Upgrades — gauge/speedo */}
               <svg className="service-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8 24a11 11 0 1122 0" stroke="#FFF200" strokeWidth="1.8" strokeLinecap="round" fill="none"/>
-                <path d="M19 24l-5-7" stroke="#FFF200" strokeWidth="2" strokeLinecap="round"/>
-                <circle cx="19" cy="24" r="2" fill="#FFF200"/>
-                <path d="M10 27l1.5-1.5M28 27l-1.5-1.5M19 12v2" stroke="#FFF200" strokeWidth="1.5" strokeLinecap="round"/>
-                <path d="M24 14l-1 1.7" stroke="#FFF200" strokeWidth="1.5" strokeLinecap="round"/>
+                <path d="M8 24a11 11 0 1122 0" stroke="#38BDF8" strokeWidth="1.8" strokeLinecap="round" fill="none"/>
+                <path d="M19 24l-5-7" stroke="#38BDF8" strokeWidth="2" strokeLinecap="round"/>
+                <circle cx="19" cy="24" r="2" fill="#38BDF8"/>
+                <path d="M10 27l1.5-1.5M28 27l-1.5-1.5M19 12v2" stroke="#38BDF8" strokeWidth="1.5" strokeLinecap="round"/>
+                <path d="M24 14l-1 1.7" stroke="#38BDF8" strokeWidth="1.5" strokeLinecap="round"/>
               </svg>
               <div className="service-title">Performance Upgrades</div>
             </div>
             <div className="service-card">
               {/* Off Road — truck with terrain */}
               <svg className="service-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="5" y="14" width="22" height="12" rx="2" stroke="#FFF200" strokeWidth="1.8" fill="none"/>
-                <path d="M27 18h3l3 4v4h-6" stroke="#FFF200" strokeWidth="1.8" strokeLinejoin="round" fill="none"/>
-                <circle cx="11" cy="28" r="3" stroke="#FFF200" strokeWidth="1.8" fill="none"/>
-                <circle cx="27" cy="28" r="3" stroke="#FFF200" strokeWidth="1.8" fill="none"/>
-                <path d="M14 28h10" stroke="#FFF200" strokeWidth="1.8"/>
-                <path d="M5 22h22" stroke="#FFF200" strokeWidth="1.2" strokeDasharray="2 2"/>
-                <path d="M9 14v-3M15 14v-5M21 14v-3" stroke="#FFF200" strokeWidth="1.5" strokeLinecap="round"/>
+                <rect x="5" y="14" width="22" height="12" rx="2" stroke="#38BDF8" strokeWidth="1.8" fill="none"/>
+                <path d="M27 18h3l3 4v4h-6" stroke="#38BDF8" strokeWidth="1.8" strokeLinejoin="round" fill="none"/>
+                <circle cx="11" cy="28" r="3" stroke="#38BDF8" strokeWidth="1.8" fill="none"/>
+                <circle cx="27" cy="28" r="3" stroke="#38BDF8" strokeWidth="1.8" fill="none"/>
+                <path d="M14 28h10" stroke="#38BDF8" strokeWidth="1.8"/>
+                <path d="M5 22h22" stroke="#38BDF8" strokeWidth="1.2" strokeDasharray="2 2"/>
+                <path d="M9 14v-3M15 14v-5M21 14v-3" stroke="#38BDF8" strokeWidth="1.5" strokeLinecap="round"/>
               </svg>
               <div className="service-title">Off Road</div>
             </div>
             <div className="service-card">
               {/* Consultation — clipboard/checklist */}
               <svg className="service-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="10" y="8" width="18" height="23" rx="2" stroke="#FFF200" strokeWidth="1.8" fill="none"/>
-                <path d="M15 8v-1a1 1 0 011-1h6a1 1 0 011 1v1" stroke="#FFF200" strokeWidth="1.5" fill="none"/>
-                <path d="M14 17l2 2 4-4" stroke="#FFF200" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M14 23l2 2 4-4" stroke="#FFF200" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M22 18h2M22 24h2" stroke="#FFF200" strokeWidth="1.5" strokeLinecap="round"/>
+                <rect x="10" y="8" width="18" height="23" rx="2" stroke="#38BDF8" strokeWidth="1.8" fill="none"/>
+                <path d="M15 8v-1a1 1 0 011-1h6a1 1 0 011 1v1" stroke="#38BDF8" strokeWidth="1.5" fill="none"/>
+                <path d="M14 17l2 2 4-4" stroke="#38BDF8" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M14 23l2 2 4-4" stroke="#38BDF8" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M22 18h2M22 24h2" stroke="#38BDF8" strokeWidth="1.5" strokeLinecap="round"/>
               </svg>
               <div className="service-title">Consultation</div>
             </div>
@@ -538,7 +546,7 @@ export default function AlfaxmsLuxuryWebsite() {
               <p>No volume quotas. Every vehicle gets the founder's direct attention.</p>
             </div>
             <div className="about-card">
-              <h3>Private Studio</h3>
+              <h3>Wylie, Texas</h3>
               <p>Location shared by appointment with verified clients only.</p>
             </div>
           </div>
