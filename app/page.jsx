@@ -1,5 +1,49 @@
+import { useEffect } from "react";
+
 export default function AlfaxmsLuxuryWebsite() {
+  useEffect(() => {
+    document.title = "ALFAXMS LLC | Luxury Automotive Services — Wylie, Texas";
+
+    let meta = document.querySelector('meta[name="description"]');
+    if (!meta) { meta = document.createElement("meta"); meta.name = "description"; document.head.appendChild(meta); }
+    meta.content = "ALFAXMS LLC is a private luxury automotive studio in Wylie, Texas. High-end maintenance, diagnostics, performance upgrades, off-road builds and more — by appointment only.";
+
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) { canonical = document.createElement("link"); canonical.rel = "canonical"; document.head.appendChild(canonical); }
+    canonical.href = "https://www.alfaxms.com";
+
+    let schema = document.getElementById("alfaxms-schema");
+    if (!schema) { schema = document.createElement("script"); schema.id = "alfaxms-schema"; schema.type = "application/ld+json"; document.head.appendChild(schema); }
+    schema.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "AutoRepair",
+      "name": "ALFAXMS LLC",
+      "description": "Private luxury automotive studio offering high-end maintenance, diagnostics, electrical, repair, performance upgrades, off-road builds, and consultation services.",
+      "url": "https://www.alfaxms.com",
+      "email": "info@alfaxms.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Wylie",
+        "addressRegion": "TX",
+        "addressCountry": "US"
+      },
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 33.0151, "longitude": -96.5388 },
+        "geoRadius": "50000"
+      },
+      "priceRange": "$$$",
+      "founder": { "@type": "Person", "name": "Abobakir Alfayadh" },
+      "serviceType": [
+        "Automotive Maintenance", "Vehicle Inspection", "Diagnostics",
+        "Electrical Repair", "Engine Repair", "Performance Upgrades",
+        "Off Road Builds", "Automotive Consultation"
+      ]
+    });
+  }, []);
+
   return (
+    <>
     <div className="site-root">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
@@ -553,5 +597,6 @@ export default function AlfaxmsLuxuryWebsite() {
         </div>
       </div>
     </div>
+    </>
   )
 }
